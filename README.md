@@ -226,7 +226,7 @@ gaiamind360/
 
 ## Academic Context
 
-GaiaMind360 is the practical implementation of a Master's thesis in Technology and Digital Innovation at **Universidad Europea**. The platform operationalises the research on AI-assisted environmental decision-making and the concept of **planetary digital twins** for policy analysis.
+GaiaMind360 is the practical implementation of a Master's thesis in Artificial Intelligence at **Universidad Europea**. The platform operationalises the research on AI-assisted environmental decision-making and the concept of **planetary digital twins** for policy analysis.
 
 ---
 
@@ -266,7 +266,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 <div align="center">
 
 **Built with 🌍 by [Diatezilua Katendi Nzita](https://github.com/GaiaMindApp)**  
-Universidad Europea · Master's in Technology and Digital Innovation
+Universidad Europea · Master's in Artificial Intelligence
 
 [gaiamind360.com](https://gaiamind360.com)
 
