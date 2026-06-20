@@ -1,0 +1,205 @@
+/* ============================================================
+   VARIÁVEIS CSS — LIGHT MODE ENTERPRISE
+   Paleta profissional com alta legibilidade
+   ============================================================ */
+
+html.light {
+  /* Fundos */
+  --bg-page:     #F8FAFC;
+  --bg-surface:  #FFFFFF;
+  --bg-surface2: #F1F5F9;
+  --bg-input:    #FFFFFF;
+  --bg-hover:    #ECFDF5;
+  
+  /* Tipografia — hierarquia visual preservada */
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+  --text-label:     #64748B;
+  
+  /* Cores de Acento / Brand */
+  --color-primary:       #10B981;
+  --color-primary-dark:  #0E9F6E;
+  --color-primary-light: #34D399;
+  
+  /* Cores semânticas — mesma lógica do dark, ajustadas para fundo claro */
+  --accent-green:  #057A55;   /* Stable / Improving / Positive */
+  --accent-blue:   #1D4ED8;   /* Info / Neutral */
+  --accent-red:    #DC2626;   /* Critical / Danger / Negative */
+  --accent-yellow: #D97706;   /* Warning / Caution */
+  --accent-orange: #EA580C;   /* At Risk / High */
+
+  /* Tokens semânticos explícitos — usados em KPIs, badges, indicadores */
+  --color-critical:  #DC2626;
+  --color-high:      #DC2626;
+  --color-watchlist: #EA580C;
+  --color-warning:   #D97706;
+  --color-stable:    #057A55;
+  --color-improving: #10B981;
+  --color-info:      #1D4ED8;
+
+  /* Backgrounds semânticos (para badges/chips) */
+  --bg-critical:  rgba(220, 38, 38, 0.08);
+  --bg-warning:   rgba(217, 119, 6, 0.08);
+  --bg-stable:    rgba(5, 122, 85, 0.08);
+  --bg-improving: rgba(16, 185, 129, 0.08);
+  --bg-info:      rgba(29, 78, 216, 0.08);
+  
+  /* Bordas */
+  --border-subtle: #E2E8F0;
+  --border-normal: #CBD5E1;
+  --border-strong: #94A3B8;
+  
+  /* Sombras Enterprise */
+  --shadow-card:       0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-header:     0 2px 8px rgba(0, 0, 0, 0.08);
+  
+  /* Sidebar */
+  --sidebar-bg: #FFFFFF;
+}
+
+/* Base Enterprise */
+html.light,
+html.light body,
+html.light #root {
+  background: #F8FAFC !important;
+  background-image: none !important;
+  color: #0F172A !important;
+}
+
+/* Layout Enterprise */
+html.light .app-container {
+  background: #F8FAFC !important;
+}
+
+html.light .app-header {
+  background: linear-gradient(90deg, #0E9F6E 0%, #10B981 100%) !important;
+  box-shadow: var(--shadow-header) !important;
+}
+
+html.light .header-title { 
+  color: #FFFFFF !important; 
+  font-weight: 600;
+}
+
+html.light .menu-toggle { 
+  color: #FFFFFF !important; 
+}
+
+html.light .logout-btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  font-weight: 500;
+}
+
+html.light .logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Sidebar Enterprise */
+html.light .app-sidebar {
+  background: #FFFFFF !important;
+  border-right: 1px solid var(--border-subtle) !important;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light .sidebar-item { 
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+}
+
+html.light .sidebar-item:hover {
+  background: var(--bg-hover) !important;
+  border-left-color: var(--color-primary) !important;
+  color: var(--color-primary-dark) !important;
+}
+
+html.light .sidebar-item.active {
+  background: var(--bg-hover) !important;
+  color: var(--color-primary-dark) !important;
+  border-left-color: var(--color-primary) !important;
+  font-weight: 600;
+}
+
+html.light .sidebar-divider { 
+  background: var(--border-subtle) !important; 
+}
+
+html.light .sidebar-mobile-header span { 
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+html.light .sidebar-mobile-close {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: var(--text-secondary) !important;
+}
+
+html.light .app-main {
+  background: #F8FAFC !important;
+}
+
+/* Tipografia Enterprise */
+html.light h1, 
+html.light h2, 
+html.light h3,
+html.light h4, 
+html.light h5, 
+html.light h6 {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+html.light p { 
+  color: var(--text-secondary) !important;
+  line-height: 1.6;
+}
+
+html.light label { 
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+}
+
+/* Inputs Enterprise */
+html.light input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+html.light select,
+html.light textarea {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-normal) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+  outline: none !important;
+}
+
+/* Scrollbar Enterprise */
+html.light ::-webkit-scrollbar { 
+  width: 8px; 
+  height: 8px; 
+}
+
+html.light ::-webkit-scrollbar-track { 
+  background: var(--border-subtle); 
+}
+
+html.light ::-webkit-scrollbar-thumb { 
+  background: var(--text-muted); 
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover { 
+  background: var(--text-secondary); 
+}

@@ -1,0 +1,225 @@
+/* ============================================================
+   MAP — LIGHT MODE ENTERPRISE
+   GlobalMap, EnhancedDataOverlays, MapControls, InfoPanel
+   ============================================================ */
+
+/* ── MAP CONTAINER & CONTROLS ─────────────────────────────── */
+html.light .map-container {
+  background: #FFFFFF !important;
+}
+
+html.light .map-controls {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light .map-control-btn {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  color: #475569 !important;
+  transition: all 0.2s ease !important;
+}
+
+html.light .map-control-btn:hover {
+  background: #F8F9FA !important;
+  border-color: #00875A !important;
+  color: #00875A !important;
+}
+
+html.light .map-control-btn.active,
+html.light .map-control-btn--active {
+  background: rgba(0, 135, 90, 0.08) !important;
+  border-color: #00875A !important;
+  color: #00875A !important;
+}
+
+/* ── INFO PANEL & OVERLAYS ──────────────────────────────── */
+html.light .info-panel,
+html.light .map-info-panel,
+html.light .overlay-panel {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+  color: #0F172A !important;
+}
+
+html.light .info-panel-header,
+html.light .overlay-header {
+  background: rgba(0, 135, 90, 0.04) !important;
+  border-bottom: 1px solid #E8EAED !important;
+  color: #00875A !important;
+}
+
+html.light .info-panel-title,
+html.light .overlay-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .info-panel-subtitle {
+  color: #5F6368 !important;
+  font-size: 0.875rem !important;
+}
+
+html.light .info-panel-content,
+html.light .overlay-content {
+  color: #1F1F1F !important;
+}
+
+html.light .info-panel-close,
+html.light .overlay-close {
+  color: #5F6368 !important;
+}
+
+html.light .info-panel-close:hover,
+html.light .overlay-close:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #0F172A !important;
+}
+
+/* ── DATA LABELS & TEXT ────────────────────────────────── */
+html.light .map-label,
+html.light .data-label,
+html.light .overlay-label {
+  color: #0F172A !important;
+}
+
+html.light .map-label-muted,
+html.light .data-label-muted {
+  color: #5F6368 !important;
+}
+
+html.light [class*="label"][style*="color: rgba(224,247,250"] {
+  color: #0F172A !important;
+}
+
+/* ── MAP MARKERS & POINTS ──────────────────────────────── */
+html.light .marker-container,
+html.light .map-marker {
+  filter: none !important;
+}
+
+html.light .city-marker,
+html.light .data-point {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* ── STATS & DATA CARDS ─────────────────────────────── */
+html.light .stat-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .stat-card:hover {
+  border-color: #00875A !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+  background: #FAFBFC !important;
+}
+
+html.light .stat-label {
+  color: #5F6368 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+}
+
+html.light .stat-value {
+  color: #0F172A !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+html.light .stat-change {
+  font-size: 0.75rem !important;
+}
+
+html.light .stat-change.positive {
+  color: #057A55 !important;
+}
+
+html.light .stat-change.negative {
+  color: #DC2626 !important;
+}
+
+/* ── GRID LAYOUTS ──────────────────────────────────────── */
+html.light .grid-2,
+html.light .grid-3,
+html.light .grid-4,
+html.light .grid-auto {
+  gap: 1rem !important;
+}
+
+/* ── NAVIGATION & TABS ───────────────────────────────── */
+html.light .map-nav,
+html.light .map-tabs {
+  border-bottom: 1px solid #E8EAED !important;
+}
+
+html.light .map-tab-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #5F6368 !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 0.75rem 1rem !important;
+}
+
+html.light .map-tab-btn:hover {
+  color: #00875A !important;
+  border-bottom-color: rgba(0, 135, 90, 0.3) !important;
+}
+
+html.light .map-tab-btn.active,
+html.light .map-tab-btn--active {
+  color: #00875A !important;
+  border-bottom-color: #00875A !important;
+  font-weight: 600 !important;
+}
+
+/* ── LOADING & STATES ──────────────────────────────── */
+html.light .map-loading-spinner {
+  color: #00875A !important;
+}
+
+html.light .map-empty-state {
+  color: #5F6368 !important;
+}
+
+html.light .map-error-state {
+  background: rgba(220, 38, 38, 0.04) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  color: #DC2626 !important;
+}
+
+/* ── MODAL CARD — LIGHT MODE ────────────────────── */
+html.light .global-stats-country-modal-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+  color: #1F1F1F !important;
+}
+
+html.light .global-stats-country-modal-card h2 {
+  color: #0B57D0 !important;
+}
+
+html.light .global-stats-country-modal-card p {
+  color: #5F6368 !important;
+}
+
+html.light .global-stats-country-modal-card .flag-container {
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .global-stats-country-modal-card button {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+  color: #1F1F1F !important;
+}
+
+html.light .global-stats-country-modal-card button:hover {
+  background: #ECECF0 !important;
+  border-color: #00875A !important;
+}

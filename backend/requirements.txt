@@ -1,0 +1,73 @@
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.121.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.20
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+SQLAlchemy==2.0.44
+chromadb==0.6.3
+
+# ── AI Providers ──────────────────────────────────────────────────────────────
+openai==1.51.0
+google-generativeai==0.8.3
+groq==0.11.0
+
+# ── NLP / ML ──────────────────────────────────────────────────────────────────
+spacy==3.7.6
+numpy>=1.24.0,<2.0.0
+pandas==2.2.3
+scikit-learn==1.5.2
+scikit-survival>=0.23
+lifelines>=0.29
+xgboost>=3.0
+lightgbm>=4.0
+# catboost removido — binarios incompativeis com numpy 2.x no Windows
+# Os modelos cls_catboost.pkl / reg_catboost.pkl nao sao usados no pipeline activo
+
+# ── HTTP ──────────────────────────────────────────────────────────────────────
+httpx==0.27.2
+requests==2.32.3
+aiohttp==3.10.10
+
+# ── Security / Auth ───────────────────────────────────────────────────────────
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.0
+cryptography>=42.0.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+python-dateutil==2.9.0.post0
+pyyaml==6.0.2
+tavily-python==0.5.0
+
+# ── RL (policy simulation) ────────────────────────────────────────────────────
+gymnasium==1.0.0
+
+# ── Routing / Keras compat ───────────────────────────────────────────────────
+tf-keras==2.21.0
+semantic-router>=0.1.0
+tensorflow==2.21.0
+
+# ── LangChain ─────────────────────────────────────────────────────────────────
+langchain==0.3.25
+langchain-core==0.3.59
+langchain-community==0.3.24
+
+# ── PostgreSQL driver ────────────────────────────────────────────────────────
+psycopg2-binary==2.9.10
+
+# ── Cache ─────────────────────────────────────────────────────────────────────
+redis==5.0.8
+
+
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==5.0.0
+prometheus-client==0.21.0
+psutil>=5.9.0

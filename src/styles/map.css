@@ -1,0 +1,192 @@
+/* ============================================================
+   GLOBAL MAP — DARK MODE
+   Dark theme CSS for the GlobalMap area and related panels
+   ============================================================ */
+
+.global-map-root {
+  min-height: 100%;
+  color: var(--text-primary);
+}
+
+.global-map-selected-country-panel,
+.global-map-bottom-sheet,
+.global-map-modal-window,
+.global-stats-country-modal-content,
+.global-data-panel {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-normal) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16) !important;
+  color: var(--text-primary) !important;
+}
+
+.global-map-selected-country-panel {
+  border-radius: 16px !important;
+}
+
+.global-map-selected-country-panel .panel-header,
+.global-data-panel-header,
+.global-stats-country-modal-content .modal-header {
+  border-bottom: 1px solid var(--border-normal) !important;
+}
+
+.global-map-selected-country-panel .panel-header,
+.global-data-panel-header,
+.global-stats-country-modal-content .modal-header {
+  padding: 12px 14px !important;
+}
+
+.global-map-selected-country-panel .panel-title,
+.global-data-panel-header .panel-title,
+.global-stats-country-modal-content .modal-title {
+  color: var(--text-primary) !important;
+}
+
+.global-map-selected-country-panel .panel-subtitle,
+.global-data-panel-header .panel-subtitle,
+.global-stats-country-modal-content .modal-subtitle,
+.global-stats-country-modal-content .modal-note {
+  color: var(--text-secondary) !important;
+}
+
+.global-map-modal-overlay,
+.global-stats-country-modal-overlay {
+  background: rgba(0, 0, 0, 0.62) !important;
+}
+
+.global-map-modal-window,
+.global-stats-country-modal-content {
+  border-radius: 16px !important;
+}
+
+.global-map-modal-close,
+.global-map-country-modal-close,
+.global-data-panel-close {
+  background: var(--bg-input) !important;
+  border: 1px solid var(--border-normal) !important;
+  color: var(--text-secondary) !important;
+}
+
+.global-map-modal-close:hover,
+.global-map-country-modal-close:hover,
+.global-data-panel-close:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-primary) !important;
+}
+
+.global-map-tab-button {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 4px !important;
+  border: none !important;
+}
+
+.global-map-tab-button.active {
+  background: var(--color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+.global-map-panel-tag,
+.global-map-button,
+.global-map-country-button {
+  background: rgba(52, 168, 83, 0.1) !important;
+  border: 1px solid rgba(52, 168, 83, 0.3) !important;
+  color: var(--text-secondary) !important;
+}
+
+.global-map-panel-tag:hover,
+.global-map-button:hover,
+.global-map-country-button:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.global-data-panel {
+  border-radius: 12px !important;
+}
+
+.global-data-panel-content {
+  padding: 24px !important;
+}
+
+.global-data-panel-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 20px 24px !important;
+}
+
+.global-data-panel-header .panel-title {
+  color: var(--accent-green) !important;
+  font-size: 18px !important;
+}
+
+.global-data-panel-header .panel-close {
+  background: none !important;
+  border: none !important;
+  color: var(--text-secondary) !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+}
+
+.global-data-panel-header .panel-close:hover {
+  color: var(--text-primary) !important;
+}
+
+.global-stats-country-modal-content {
+  padding: 1.25rem !important;
+}
+
+.global-stats-country-modal-content .modal-body {
+  padding-top: 0.75rem !important;
+}
+
+.global-stats-country-modal-content .modal-card {
+  background: rgba(0, 48, 73, 0.4) !important;
+  border-color: rgba(0, 230, 118, 0.2) !important;
+}
+
+.global-stats-country-modal-content .modal-card h2,
+.global-stats-country-modal-content .modal-card p {
+  color: var(--text-primary) !important;
+}
+
+.global-stats-country-modal-content .modal-card .meta {
+  color: var(--text-secondary) !important;
+}
+
+.global-map-country-modal-close {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+}
+
+/* ── MODAL CARD ────────────────────────────────────── */
+.global-stats-country-modal-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-normal) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+.global-stats-country-modal-card h2 {
+  color: var(--color-primary) !important;
+}
+
+.global-stats-country-modal-card p {
+  color: var(--text-secondary) !important;
+}
+
+.global-stats-country-modal-card .flag-container {
+  border: 1px solid var(--border-normal) !important;
+}
+
+.global-stats-country-modal-card button {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid var(--border-normal) !important;
+  color: var(--text-primary) !important;
+}
+
+.global-stats-country-modal-card button:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}

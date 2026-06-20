@@ -1,0 +1,483 @@
+/* ============================================================
+   CHAT — LIGHT MODE GEMINI/MATERIAL DESIGN 3
+   Identidade visual focada em legibilidade e modernidade
+   ============================================================ */
+
+/* Container Principal */
+html.light .chat-container {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+/* Header */
+html.light .chat-header {
+  background: linear-gradient(90deg, #0B57D0 0%, #4285F4 100%) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .chat-header-title {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html.light .chat-header-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html.light .chat-stats-btn {
+  background: #FFFFFF !important;
+  color: #0B57D0 !important;
+  border: none;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .chat-stats-btn:hover {
+  background: #F8F9FA !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Country Selector */
+html.light .chat-country-selector {
+  background: #F0F4F8 !important;
+  border-bottom: 1px solid #E8EAED !important;
+}
+
+html.light .country-label {
+  color: #444746 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .country-badge {
+  background: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .quick-action-btn.top {
+  background: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .quick-action-btn.top:hover {
+  background: #0842A0 !important;
+}
+
+html.light .quick-action-btn.compare {
+  background: #4285F4 !important;
+  color: #FFFFFF !important;
+}
+
+html.light .quick-action-btn.compare:hover {
+  background: #1A73E8 !important;
+}
+
+/* Messages Area - Estilo Gemini */
+html.light .chat-messages {
+  background: #FFFFFF !important;
+}
+
+html.light .chat-messages::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+html.light .chat-messages::-webkit-scrollbar-thumb {
+  background: #DADCE0;
+  border-radius: 8px;
+}
+
+html.light .chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #BDC1C6;
+}
+
+/* Empty State */
+html.light .chat-empty-title {
+  color: #1F1F1F !important;
+  font-weight: 500;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .chat-empty-subtitle {
+  color: #444746 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .chat-empty-examples {
+  color: #5F6368 !important;
+}
+
+/* Message Bubbles - Estilo Gemini */
+html.light .message-content.user {
+  background: #F0F4F8 !important;
+  color: #1F1F1F !important;
+  border: none;
+  box-shadow: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 18px;
+}
+
+html.light .message-content.user p {
+  color: #1F1F1F !important;
+}
+
+html.light .message-content.agent {
+  background: transparent !important;
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+html.light .message-content.agent h1,
+html.light .message-content.agent h2,
+html.light .message-content.agent h3 {
+  color: #1F1F1F !important;
+  font-weight: 500;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .message-content.agent ul,
+html.light .message-content.agent ol {
+  color: #1F1F1F !important;
+}
+
+html.light .message-content.agent li {
+  color: #444746 !important;
+}
+
+html.light .message-content.agent strong {
+  color: #1F1F1F !important;
+  font-weight: 500;
+}
+
+html.light .message-content.agent p {
+  color: #1F1F1F !important;
+}
+
+html.light .message-content.agent code {
+  background: #F0F4F8 !important;
+  color: #0B57D0 !important;
+  border: 1px solid #E8EAED;
+  font-family: 'Roboto Mono', 'Google Sans Mono', monospace;
+}
+
+html.light .message-content.agent pre {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED;
+  border-radius: 8px;
+}
+
+html.light .message-content.agent pre code {
+  color: #1F1F1F !important;
+  background: transparent !important;
+  border: none;
+}
+
+html.light .message-timestamp {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Loading Indicator */
+html.light .loading-dots {
+  background: #F0F4F8 !important;
+  border: none;
+  box-shadow: none;
+}
+
+html.light .loading-dot {
+  background: #0B57D0 !important;
+}
+
+/* Input Area - Estilo Gemini */
+html.light .chat-input-area {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E8EAED !important;
+}
+
+html.light .chat-input {
+  background: #F0F4F8 !important;
+  border: 1px solid #E8EAED !important;
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 24px;
+}
+
+html.light .chat-input:focus {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1) !important;
+  background: #FFFFFF !important;
+}
+
+html.light .chat-input:disabled {
+  background: #F8F9FA !important;
+  color: #5F6368 !important;
+}
+
+html.light .chat-input::placeholder {
+  color: #5F6368 !important;
+}
+
+html.light .chat-send-btn {
+  background: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+html.light .chat-send-btn:hover:not(:disabled) {
+  background: #0842A0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+html.light .chat-send-btn:disabled {
+  background: #E8EAED !important;
+  color: #5F6368 !important;
+}
+
+/* Stats Modal */
+html.light .stats-modal-overlay {
+  background: rgba(0, 0, 0, 0.32) !important;
+}
+
+html.light .stats-modal {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+html.light .stats-modal-title {
+  color: #1F1F1F !important;
+  font-weight: 500;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .stats-item {
+  color: #444746 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .stats-value {
+  color: #0B57D0 !important;
+  font-weight: 500;
+}
+
+html.light .stats-country-item {
+  color: #5F6368 !important;
+}
+
+html.light .stats-close-btn {
+  background: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+html.light .stats-close-btn:hover {
+  background: #0842A0 !important;
+}
+
+/* Welcome Screen - Estilo Gemini */
+html.light .chat-welcome-greeting {
+  color: #444746 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .chat-welcome-hello {
+  color: #1F1F1F !important;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .chat-welcome-title {
+  color: #1F1F1F !important;
+  font-weight: 400;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .chat-welcome-input-wrap {
+  background: #F0F4F8 !important;
+  border: 1px solid #E8EAED !important;
+  border-radius: 24px;
+}
+
+html.light .chat-welcome-input-wrap:focus-within {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1) !important;
+  background: #FFFFFF !important;
+}
+
+html.light .chat-welcome-input {
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .chat-welcome-input::placeholder {
+  color: #5F6368 !important;
+}
+
+html.light .chat-welcome-send-btn {
+  background: #0B57D0 !important;
+  color: #FFFFFF !important;
+}
+
+html.light .chat-welcome-send-btn:hover:not(:disabled) {
+  background: #0842A0 !important;
+}
+
+html.light .chat-welcome-send-btn:disabled {
+  background: #E8EAED !important;
+  color: #5F6368 !important;
+}
+
+/* Suggestions - Estilo Gemini */
+html.light .chat-suggestion-chip {
+  background: #F0F4F8 !important;
+  border: 1px solid #E8EAED !important;
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 16px;
+}
+
+html.light .chat-suggestion-chip:hover {
+  background: #E8EAED !important;
+  border-color: #DADCE0 !important;
+  color: #1F1F1F !important;
+}
+
+/* Thought Block */
+html.light .thought-block {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%) !important;
+  border: 1px solid #DDE3EA !important;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08) !important;
+  border-radius: 18px;
+}
+
+html.light .thought-summary {
+  color: #111827 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .thought-summary:hover {
+  background: #F2F6FB !important;
+}
+
+html.light .thought-summary--open {
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+html.light .thought-summary-copy {
+  color: #111827 !important;
+}
+
+html.light .thought-summary-caption {
+  color: #4B5563 !important;
+}
+
+html.light .thought-badge--live {
+  background: rgba(16, 185, 129, 0.16) !important;
+  color: #047857 !important;
+}
+
+html.light .thought-badge--muted {
+  background: #EEF2F7 !important;
+  color: #1F2937 !important;
+}
+
+html.light .thought-label--thinking {
+  color: #0B57D0 !important;
+}
+
+html.light .thought-label--done {
+  color: #111827 !important;
+}
+
+html.light .thought-chevron {
+  color: #4B5563 !important;
+}
+
+html.light .thought-status-dot--thinking {
+  background: #0B57D0 !important;
+}
+
+html.light .thought-status-dot--done {
+  background: #34A853 !important;
+}
+
+html.light .thought-content {
+  background: #FFFFFF !important;
+}
+
+html.light .thought-body {
+  color: #111827 !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FBFD 100%) !important;
+  font-family: 'Roboto Mono', monospace;
+}
+
+html.light .thought-body-text {
+  color: #111827 !important;
+}
+
+html.light .thought-body::-webkit-scrollbar-thumb {
+  background: #C4CAD4 !important;
+}
+
+html.light .thought-steps {
+  border-bottom: 1px solid #E5E7EB !important;
+  background: #F8FAFC !important;
+}
+
+html.light .thought-step {
+  color: #111827 !important;
+}
+
+html.light .thought-step--active {
+  color: #0B57D0 !important;
+}
+
+html.light .thought-step--done {
+  color: #4B5563 !important;
+}
+
+html.light .thought-step--done .thought-step-icon {
+  color: #34A853 !important;
+}
+
+html.light .thought-step-label {
+  color: #111827 !important;
+  font-weight: 500;
+}
+
+html.light .thought-skeleton-line {
+  background: linear-gradient(90deg, rgba(209, 213, 219, 0.45), rgba(209, 213, 219, 0.85), rgba(209, 213, 219, 0.45)) !important;
+}
+
+html.light .thought-cursor {
+  background: #0B57D0 !important;
+}
+
+/* ── MessageActions bar ─────────────────────────────────────────────────── */
+
+html.light .message-actions-bar {
+  color: #9AA0A6 !important;
+}
+
+html.light .message-actions-bar button {
+  color: #9AA0A6 !important;
+}
+
+html.light .message-actions-bar button:hover {
+  background: #F0F4F8 !important;
+  color: #444746 !important;
+}
+
+/* ── Chat messages area — fundo ligeiramente cinzento para contraste ─────── */
+
+html.light .chat-messages {
+  background: #F8F9FA !important;
+}

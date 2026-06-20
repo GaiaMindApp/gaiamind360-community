@@ -1,0 +1,117 @@
+/* ============================================================
+   RESEARCH — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+/* Text overrides for inline styles */
+html.light .research-container p,
+html.light .research-container span,
+html.light .research-container label,
+html.light .research-container li {
+  color: #5F6368 !important; /* Muted text */
+}
+
+/* Specific stronger text */
+html.light .research-container p strong,
+html.light .research-container label {
+  color: #1F1F1F !important;
+}
+
+html.light .research-container h1,
+html.light .research-container h2,
+html.light .research-container h3,
+html.light .research-container h4 {
+  color: #0E9F6E !important; /* Enterprise Green */
+}
+
+/* Tabs */
+html.light .research-container button[style*="border-bottom: none"],
+html.light .research-container button[style*="borderBottom: none"] {
+  color: #5F6368 !important;
+}
+
+html.light .research-container button[style*="border-bottom: 2px solid"],
+html.light .research-container button[style*="borderBottom: 2px solid"] {
+  color: #0E9F6E !important;
+  border-bottom-color: #0E9F6E !important;
+  background: rgba(14, 159, 110, 0.1) !important;
+}
+
+/* History - Data Table */
+html.light .research-container table th {
+  background: #F8FAFC !important;
+  color: #0E9F6E !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+html.light .research-container table td {
+  color: #5F6368 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+html.light .research-container table tr[style*="rgba(0,48,73,0.2)"] {
+  background: #F8F9FA !important;
+}
+
+html.light .research-container table tr:hover {
+  background: #F0F4F8 !important;
+}
+
+/* History List Items */
+html.light .research-container div[style*="rgba(0,48,73,0.35)"] {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+html.light .research-container div[style*="rgba(0,48,73,0.35)"]:hover {
+  background: #FAFBFC !important;
+  border-color: #0B57D0 !important;
+}
+
+html.light .research-container div[style*="overflow: hidden"] {
+  color: #1F1F1F !important; /* Titles in history list */
+}
+
+/* Action Buttons (Icon buttons in history) */
+html.light .research-container button[style*="rgba(74,158,255"] {
+  color: #0B57D0 !important;
+  background: rgba(11, 87, 208, 0.08) !important;
+  border-color: rgba(11, 87, 208, 0.2) !important;
+}
+
+html.light .research-container button[style*="rgba(74,158,255"]:hover {
+  background: rgba(11, 87, 208, 0.15) !important;
+}
+
+html.light .research-container button[style*="rgba(255,107,107"] {
+  color: #DC2626 !important;
+  background: rgba(220, 38, 38, 0.08) !important;
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+html.light .research-container button[style*="rgba(255,107,107"]:hover {
+  background: rgba(220, 38, 38, 0.15) !important;
+}
+
+/* Insights Output boxes */
+html.light .research-container div[style*="rgba(0, 230, 118, 0.1)"] {
+  background: rgba(14, 159, 110, 0.08) !important;
+  border-left-color: #0E9F6E !important;
+}
+
+/* Error message box */
+html.light .research-container div[style*="rgba(255, 107, 107, 0.2)"] {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border-color: rgba(220, 38, 38, 0.3) !important;
+  color: #DC2626 !important;
+}
+
+/* Drag and Drop Box */
+html.light .research-container div[style*="dashed"] {
+  border-color: #CBD5E1 !important;
+  background: #F8FAFC !important;
+}
+
+html.light .research-container div[style*="dashed"]:hover {
+  border-color: #0E9F6E !important;
+  background: rgba(14, 159, 110, 0.05) !important;
+}

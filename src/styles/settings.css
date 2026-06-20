@@ -1,0 +1,63 @@
+/* ── Settings — Responsividade (REPORT_GUIA_RESPONSIVIDADE_REFERENCIA) ── */
+
+/* Container: height: 100% em vez de 100vh (regra 4.4) */
+.settings-container {
+  height: 100%;
+  min-height: 0;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom)); /* regra 4.5 */
+  overflow-y: auto;
+}
+
+/* Wrapper com max-width centrado */
+.settings-wrapper {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* Tabs: scroll horizontal em xs, sem overflow */
+.settings-tabs {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px; /* evita corte do outline */
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.settings-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tab label: ocultar texto em xs, mostrar a partir de sm (regra 5 — .hide-mobile) */
+.settings-tab-label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .settings-tab-label {
+    display: inline;
+  }
+}
+
+/* Botões de acção: full-width em xs (regra responsive.css) */
+@media (max-width: 479px) {
+  .settings-btn-group {
+    flex-direction: column;
+  }
+
+  .settings-btn-group > button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Touch targets: mínimo 44×44px (regra 6) */
+.settings-tabs button,
+.settings-btn-group > button {
+  min-width: 44px;
+  min-height: 44px;
+}

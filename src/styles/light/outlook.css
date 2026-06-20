@@ -1,0 +1,536 @@
+/* ============================================================
+   OUTLOOK PANEL — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+html.light .op-root {
+  background: transparent !important;
+}
+
+/* Títulos / Headings */
+html.light .op-hero-title,
+html.light .op-card-title,
+html.light .op-section-tag,
+html.light .op-detail-country {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Subtítulos / Textos Secundários */
+html.light .op-hero-subtitle,
+html.light .op-hero-meta-label,
+html.light .op-hero-urgency-label,
+html.light .op-card-subtitle,
+html.light .op-card-sub,
+html.light .op-section-sub,
+html.light .op-detail-score-label {
+  color: #5F6368 !important;
+}
+
+/* Cards & Containers */
+html.light .op-hero,
+html.light .op-card,
+html.light .op-alert-card,
+html.light .op-detail-header,
+html.light .op-signal-card,
+html.light .op-metric-card,
+html.light .op-phase,
+html.light .op-confidence,
+html.light .op-mini-card,
+html.light .op-driver-card,
+html.light .op-hero-stat,
+html.light .op-hero-stats,
+html.light .op-card-grid,
+html.light .op-driver-grid,
+html.light .op-verdict-card,
+html.light .op-priority-row,
+html.light .op-time-horizon-card,
+html.light .op-table-topbar,
+html.light .op-table-scroll,
+html.light .op-forecast-cell,
+html.light .op-roi,
+html.light .op-cta-box,
+html.light .op-alerts-panel,
+html.light .op-table-footer,
+html.light .op-table-section {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .op-hero-stat,
+html.light .op-hero-stat-num,
+html.light .op-hero-stat-label,
+html.light .op-mini-card,
+html.light .op-driver-card,
+html.light .op-verdict-card,
+html.light .op-priority-row,
+html.light .op-time-horizon-card,
+html.light .op-forecast-cell,
+html.light .op-roi,
+html.light .op-cta-box,
+html.light .op-alert-card,
+html.light .op-detail-header,
+html.light .op-signal-card,
+html.light .op-table-topbar,
+html.light .op-table-scroll,
+html.light .op-table-footer {
+  color: #1F1F1F !important;
+}
+
+html.light .op-priority-row {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+}
+html.light .op-priority-rank { color: #5F6368 !important; }
+html.light .op-priority-country { color: #1F1F1F !important; }
+html.light .op-priority-content,
+html.light .op-priority-list,
+html.light .op-priority-panel {
+  color: #1F1F1F !important;
+}
+html.light .op-priority-meta,
+html.light .op-priority-driver {
+  color: #5F6368 !important;
+}
+html.light .op-priority-badge {
+  color: #1F1F1F !important;
+  background: rgba(232,234,237,0.35) !important;
+  border-color: transparent !important;
+}
+html.light .op-alert-header,
+html.light .op-alert-code,
+html.light .op-alert-score,
+html.light .op-alert-meta,
+html.light .op-alert-trigger,
+html.light .op-alert-action,
+html.light .op-detail-score-wrap,
+html.light .op-sort-icon,
+html.light .op-hero-left,
+html.light .op-hero-right,
+html.light .op-two-col,
+html.light .op-metrics-grid,
+html.light .op-forecast-grid,
+html.light .op-verdict-grid,
+html.light .op-verdict-icon,
+html.light .op-verdict-pct,
+html.light .op-detail-header-left,
+html.light .op-detail-icon,
+html.light .op-driver-tag,
+html.light .op-error,
+html.light .op-executive,
+html.light .op-system-diagnosis,
+html.light .op-loading {
+  color: #1F1F1F !important;
+}
+html.light .op-signal-tag,
+html.light .op-signal-text,
+html.light .op-signal-strategy,
+html.light .op-signal-pos,
+html.light .op-signal-neg,
+html.light .op-signal-none {
+  color: #1F1F1F !important;
+}
+html.light .op-metric-sub { color: #5F6368 !important; }
+
+/* Stats / Metricas globais */
+html.light .op-hero-stat-label,
+html.light .op-driver-label,
+html.light .op-verdict-label,
+html.light .op-time-horizon-label,
+html.light .op-metric-label,
+html.light .op-priority-rank,
+html.light .op-hero-meta-label,
+html.light .op-hero-urgency-label,
+html.light .op-card-subtitle,
+html.light .op-card-sub,
+html.light .op-section-sub,
+html.light .op-detail-score-label,
+html.light .op-forecast-label,
+html.light .op-time-horizon-desc,
+html.light .op-contrib-label,
+html.light .op-forecast-label {
+  color: #5F6368 !important;
+}
+
+html.light .op-driver-rank,
+html.light .op-table-empty,
+html.light .op-priority-country {
+  color: #1F1F1F !important;
+}
+
+html.light .op-hero-stat-num,
+html.light .op-verdict-count,
+html.light .op-metric-value,
+html.light .op-card-value,
+html.light .op-detail-score,
+html.light .op-detail-action,
+html.light .op-detail-verdict,
+html.light .op-hero-meta-state,
+html.light .op-hero-meta-type,
+html.light .op-hero-urgency-score,
+html.light .op-hero-urgency-badge,
+html.light .op-driver-value,
+html.light .op-forecast-val,
+html.light .op-time-horizon-value,
+html.light .op-table-badge {
+  color: inherit !important;
+}
+
+/* Textos gerais */
+html.light .op-card-text,
+html.light .op-signal-text,
+html.light .op-phase-text,
+html.light .op-time-horizon-desc,
+html.light .op-diagnosis,
+html.light .op-warning,
+html.light .op-priority-country,
+html.light .op-strategic-points {
+  color: #1F1F1F !important;
+}
+
+/* Tabela */
+html.light .op-table-section { background: #FFFFFF !important; border-color: #E8EAED !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important; }
+html.light .op-table-header { color: #00875A !important; font-family: 'Google Sans', sans-serif !important; font-weight: 700 !important; }
+html.light .op-table-count { color: #5F6368 !important; font-weight: normal !important; }
+html.light .op-table-search { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #1F1F1F !important; }
+html.light .op-table-search:focus { border-color: #00875A !important; background: #FFFFFF !important; box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important; }
+html.light .op-table th { background: #F8F9FA !important; color: #5F6368 !important; border-bottom: 2px solid #E8EAED !important; }
+html.light .op-table td { border-bottom: 1px solid #E8EAED !important; color: #5F6368 !important; }
+html.light .op-table-row:hover { background: #F0F4F8 !important; }
+html.light .op-td-country { color: #1F1F1F !important; font-weight: 500 !important; }
+html.light .op-table-footer { color: #5F6368 !important; border-top-color: #E8EAED !important; }
+html.light .op-bar-track { background: #E8EAED !important; }
+html.light .op-impact-row { border-bottom-color: #E8EAED !important; }
+html.light .op-impact-label, html.light .op-contrib-label, html.light .op-forecast-label { color: #5F6368 !important; }
+html.light .op-back-btn { background: #F0F4F8 !important; color: #00875A !important; border-color: #DADCE0 !important; }
+html.light .op-back-btn:hover { background: #E8EAED !important; }
+
+/* Detail Panel Overrides */
+html.light .op-detail {
+  background: transparent !important;
+}
+
+html.light .op-detail-header {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .op-detail-header-left,
+html.light .op-detail-score-wrap {
+  color: #1F1F1F !important;
+}
+
+html.light .op-detail-country {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+}
+
+html.light .op-detail-verdict {
+  color: #5F6368 !important;
+}
+
+html.light .op-detail-score {
+  color: #00875A !important;
+}
+
+html.light .op-detail-score-label {
+  color: #5F6368 !important;
+}
+
+html.light .op-detail-action {
+  color: #1F1F1F !important;
+}
+
+/* Signal Cards Detail */
+html.light .op-signal-card {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .op-signal-tag {
+  color: #5F6368 !important;
+}
+
+html.light .op-signal-text {
+  color: #1F1F1F !important;
+}
+
+html.light .op-signal-strategy {
+  color: #5F6368 !important;
+  border-top-color: #E8EAED !important;
+}
+
+html.light .op-signal-strategy strong {
+  color: #1F1F1F !important;
+}
+
+/* Metric Cards */
+html.light .op-metric-card {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .op-metric-label {
+  color: #5F6368 !important;
+}
+
+html.light .op-metric-sub {
+  color: #9AA0A6 !important;
+}
+
+/* Contribution Rows */
+html.light .op-contrib-row {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+}
+
+html.light .op-contrib-header {
+  color: #1F1F1F !important;
+}
+
+html.light .op-contrib-label {
+  color: #5F6368 !important;
+}
+
+html.light .op-contrib-dom {
+  color: #1F1F1F !important;
+}
+
+html.light .op-contrib-val {
+  color: #1F1F1F !important;
+}
+
+html.light .op-diagnosis {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+  padding: 0.75rem !important;
+  border-left: 3px solid !important;
+  border-radius: 0.375rem !important;
+}
+
+/* Forecast Grid */
+html.light .op-forecast-grid {
+  display: grid !important;
+}
+
+html.light .op-forecast-cell {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .op-forecast-label {
+  color: #5F6368 !important;
+}
+
+/* System Signals — semântica preservada, luminosidade adaptada */
+html.light .op-signal-pos {
+  color: #057A55 !important;
+}
+
+html.light .op-signal-neg {
+  color: #DC2626 !important;
+}
+
+html.light .op-signal-none {
+  color: #94A3B8 !important;
+}
+
+/* Card Styles in Detail */
+html.light .op-card {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  color: #1F1F1F !important;
+  box-sizing: border-box !important;
+  border-radius: 0.75rem !important;
+}
+
+html.light .op-card-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .op-card-sub {
+  color: #5F6368 !important;
+}
+
+html.light .op-card-text {
+  color: #1F1F1F !important;
+}
+
+/* Table Row Details */
+html.light .op-table-row:hover td {
+  background: #F8F9FA !important;
+  color: #1F1F1F !important;
+}
+
+html.light .op-table-th-sort {
+  color: #5F6368 !important;
+}
+
+html.light .op-table-th-sort:hover {
+  color: #00875A !important;
+}
+
+html.light .op-sort-icon {
+  color: #DADCE0 !important;
+}
+
+/* ROI and Confidence Sections */
+html.light .op-roi {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+  padding: 0.75rem !important;
+  border-left: 3px solid !important;
+  border-radius: 0.375rem !important;
+}
+
+html.light .op-roi strong {
+  color: #1F1F1F !important;
+}
+
+html.light .op-confidence {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem 1.25rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+  color: #1F1F1F !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .op-confidence span {
+  color: #1F1F1F !important;
+  font-size: 0.875rem !important;
+}
+
+html.light .op-confidence strong {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+}
+
+/* Phase borders and labels */
+html.light .op-phase {
+  padding-top: 0 !important;
+}
+
+html.light .op-phase--border {
+  border-top: 1px solid #E8EAED !important;
+  padding-top: 0.625rem !important;
+  margin-top: 0.25rem !important;
+}
+
+html.light .op-phase-label {
+  color: #5F6368 !important;
+  font-size: 0.58rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+html.light .op-phase-text {
+  color: #1F1F1F !important;
+  font-weight: 500 !important;
+  margin-top: 0.15rem !important;
+}
+
+/* Impact Comparison Rows */
+html.light .op-impact-row {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  border-radius: 0.375rem !important;
+  padding: 0.625rem 0.875rem !important;
+  margin-bottom: 0.5rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+html.light .op-impact-label {
+  color: #5F6368 !important;
+  font-size: 0.78rem !important;
+}
+
+html.light .op-impact-val {
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* Warning boxes */
+html.light .op-warning {
+  background: #FEF3C7 !important;
+  border-left: 3px solid #F59E0B !important;
+  color: #92400E !important;
+  border-radius: 0 0.375rem 0.375rem 0 !important;
+}
+
+html.light .op-warning strong {
+  color: #92400E !important;
+}
+
+/* ============================================================
+   OUTLOOK — Semântica de cores em falta (light mode)
+   ============================================================ */
+
+/* Counterfactual badges — semântica preservada */
+html.light .op-counterfactual-badges span:first-child { color: #057A55 !important; }
+html.light .op-counterfactual-badges span:last-child  { color: #DC2626 !important; }
+
+/* Time horizon value */
+html.light .op-time-horizon-value { color: #1D4ED8 !important; }
+
+/* Executive insight border */
+html.light .op-executive { border-left-color: #1D4ED8 !important; }
+
+/* System diagnosis border */
+html.light .op-system-diagnosis { border-left-color: #D97706 !important; }
+
+/* Alert card borders — semântica por nível */
+html.light .op-alert-card { background: #FFFFFF !important; border-color: #E8EAED !important; }
+
+/* Table badge — herda cor semântica do pai */
+html.light .op-table-badge { background: #F1F5F9 !important; }
+
+/* Verdict label */
+html.light .op-verdict-label { color: #64748B !important; }
+
+/* Hero stat num — herda cor semântica */
+html.light .op-hero-stat-num { color: #0F172A !important; }
+
+/* Section tag */
+html.light .op-section-tag { color: #0F172A !important; }
+html.light .op-section-sub  { color: #64748B !important; }
+
+/* CTA box */
+html.light .op-cta-box {
+  border-color: rgba(29, 78, 216, 0.3) !important;
+  background: rgba(29, 78, 216, 0.04) !important;
+}
+
+/* Strategic points */
+html.light .op-strategic-points { color: #475569 !important; border-top-color: #E2E8F0 !important; }
+
+/* Time horizon grid */
+html.light .op-time-horizon-grid { border-top-color: #E2E8F0 !important; }
+html.light .op-time-horizon-card { background: #F8FAFC !important; border-color: #E2E8F0 !important; }
+html.light .op-time-horizon-label { color: #94A3B8 !important; }
+html.light .op-time-horizon-desc  { color: #64748B !important; }
+
+/* Driver tag */
+html.light .op-driver-tag { background: #F1F5F9 !important; color: #475569 !important; }
+html.light .op-driver-rank  { color: #94A3B8 !important; }
+html.light .op-driver-label { color: #64748B !important; }
+
+/* Verdict pct */
+html.light .op-verdict-pct { color: #475569 !important; }

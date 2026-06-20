@@ -1,0 +1,275 @@
+/* ============================================
+   POLICY SIMULATOR
+   ============================================ */
+
+.ps-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ps-loading {
+  padding: 2rem;
+  color: rgba(224,247,250,0.4);
+  font-size: 0.85rem;
+}
+
+.ps-error {
+  background: rgba(248,113,113,0.1);
+  border: 1px solid rgba(248,113,113,0.3);
+  border-radius: 0.625rem;
+  padding: 0.875rem 1.25rem;
+  color: #f87171;
+  font-size: 0.82rem;
+}
+
+/* ── HEADER ── */
+.ps-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+.ps-title  { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; color: #E0F7FA; }
+
+/* ── SELECTORS ── */
+.ps-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(0,48,73,0.4);
+  border: 1px solid rgba(0,230,118,0.12);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  align-items: flex-end;
+}
+
+.ps-selector-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.ps-selector-country { flex: 1; min-width: 180px; }
+
+.ps-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(224,247,250,0.35);
+}
+
+.ps-tier-btns { display: flex; gap: 0.4rem; }
+
+.ps-tier-btn {
+  padding: 0.4rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(224,247,250,0.1);
+  background: rgba(0,48,73,0.3);
+  color: rgba(224,247,250,0.6);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.ps-tier-btn:hover { border-color: rgba(0,230,118,0.3); color: #E0F7FA; }
+.ps-tier-btn--active { border-color: #00E676; background: rgba(0,56,40,0.5); color: #E0F7FA; }
+
+.ps-select {
+  background: rgba(0,48,73,0.6);
+  border: 1px solid rgba(0,230,118,0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  color: #E0F7FA;
+  font-size: 0.85rem;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.ps-select:focus { border-color: rgba(0,230,118,0.5); }
+
+/* ── COUNTRY SEARCH ── */
+.ps-country-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.ps-country-input {
+  width: 100%;
+  background: rgba(0,48,73,0.6);
+  border: 1px solid rgba(0,230,118,0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  color: #E0F7FA;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ps-country-input:focus { border-color: rgba(0,230,118,0.5); }
+.ps-country-input::placeholder { color: rgba(224,247,250,0.3); }
+
+.ps-suggestions {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: rgba(0,20,40,0.98);
+  border: 1px solid rgba(0,230,118,0.25);
+  border-radius: 0.5rem;
+  z-index: 50;
+  max-height: 240px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.ps-suggestion-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.875rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0,230,118,0.06);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+
+.ps-suggestion-item:last-child { border-bottom: none; }
+.ps-suggestion-item:hover { background: rgba(0,230,118,0.08); }
+
+.ps-sug-name { font-size: 0.85rem; color: #E0F7FA; font-weight: 500; }
+.ps-sug-meta { font-size: 0.68rem; color: rgba(0,230,118,0.6); white-space: nowrap; }
+
+/* ── METRICS ── */
+.ps-metrics-grid {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ps-metric-card {
+  background: rgba(0,48,73,0.4);
+  border: 1px solid rgba(0,230,118,0.1);
+  border-radius: 0.625rem;
+  padding: 0.875rem 1rem;
+}
+
+.ps-metric-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(224,247,250,0.4); margin-bottom: 0.3rem; }
+.ps-metric-value { font-size: 1.1rem; font-weight: 700; color: #E0F7FA; }
+
+/* ── GENERIC CARD ── */
+.ps-card {
+  background: rgba(0,48,73,0.35);
+  border: 1px solid rgba(0,230,118,0.12);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.ps-card-title { font-size: 0.9rem; font-weight: 700; color: #E0F7FA; }
+
+/* ── CHARTS ROW ── */
+.ps-charts-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+/* ── BOTTOM ROW ── */
+.ps-bottom-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) { .ps-bottom-row { grid-template-columns: 1fr 1fr; } }
+
+/* ── ACTION TABS ── */
+.ps-action-tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.ps-action-tab {
+  padding: 0.35rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(224,247,250,0.08);
+  background: rgba(0,48,73,0.3);
+  color: rgba(224,247,250,0.5);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.ps-action-tab:hover { border-color: rgba(0,230,118,0.3); color: #E0F7FA; }
+.ps-action-tab--active { border-color: #00E676; background: rgba(0,56,40,0.4); color: #E0F7FA; }
+
+/* ── ACTION LIST ── */
+.ps-action-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.ps-no-actions { font-size: 0.78rem; color: rgba(224,247,250,0.3); }
+
+.ps-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,48,73,0.4);
+  border-left: 3px solid;
+  border-radius: 0 0.375rem 0.375rem 0;
+  padding: 0.5rem 0.875rem;
+}
+
+.ps-action-name  { font-size: 0.82rem; color: rgba(224,247,250,0.8); }
+.ps-action-stats { font-size: 0.82rem; font-weight: 700; }
+
+/* ── MOBILE RESPONSIVE (report rules) ── */
+@media (max-width: 767px) {
+  .ps-selectors { flex-direction: column; }
+  .ps-metrics-grid { grid-template-columns: repeat(3, 1fr); }
+  .ps-charts-row { grid-template-columns: 1fr; }
+  .ps-bottom-row { grid-template-columns: 1fr; }
+  .ps-final-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 479px) {
+  .ps-tier-btns { flex-wrap: wrap; }
+  .ps-metrics-grid { grid-template-columns: 1fr 1fr; }
+  .ps-final-grid { grid-template-columns: 1fr; }
+  .ps-action-tabs { flex-wrap: wrap; }
+}
+.ps-final-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.ps-final-card {
+  background: rgba(0,48,73,0.4);
+  border: 1px solid rgba(0,230,118,0.1);
+  border-radius: 0.625rem;
+  padding: 0.875rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ps-final-card--winner {
+  border-color: #00E676;
+  background: rgba(0,56,40,0.4);
+}
+
+.ps-winner-badge { font-size: 1rem; }
+.ps-final-label  { font-size: 0.72rem; color: rgba(224,247,250,0.5); }
+.ps-final-val    { font-size: 1.2rem; font-weight: 800; color: #E0F7FA; font-variant-numeric: tabular-nums; }
+
+.ps-winner-text {
+  font-size: 0.78rem;
+  color: rgba(224,247,250,0.5);
+  text-align: center;
+  border-top: 1px solid rgba(0,230,118,0.1);
+  padding-top: 0.75rem;
+}
+
+.ps-winner-text strong { color: #00E676; }

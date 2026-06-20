@@ -1,0 +1,130 @@
+/* ============================================================
+   SETTINGS — LIGHT MODE GEMINI
+   Análise profunda: Acessibilidade e touch targets
+   ============================================================ */
+
+/* Container */
+html.light .settings-container {
+  background: #FFFFFF !important;
+}
+
+/* Wrapper */
+html.light .settings-wrapper {
+  background: #FFFFFF !important;
+}
+
+/* Tabs - Navegação clara */
+html.light .settings-tabs {
+  border-bottom: 1px solid #E8EAED;
+}
+
+html.light .settings-tabs button {
+  color: #5F6368 !important;
+  border-bottom: 2px solid transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+html.light .settings-tabs button:hover {
+  color: #1F1F1F !important;
+  background: rgba(0, 135, 90, 0.04) !important;
+}
+
+html.light .settings-tabs button[aria-selected="true"],
+html.light .settings-tabs button.active {
+  color: #00875A !important;
+  border-bottom-color: #00875A !important;
+  font-weight: 500;
+}
+
+/* Button Group */
+html.light .settings-btn-group > button {
+  background: #F0F4F8 !important;
+  color: #1F1F1F !important;
+  border: 1px solid #DADCE0 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .settings-btn-group > button:hover {
+  background: #E8EAED !important;
+  border-color: #00875A !important;
+}
+
+html.light .settings-btn-group > button.active {
+  background: #00875A !important;
+  color: #FFFFFF !important;
+  border-color: #00875A !important;
+}
+
+/* Títulos */
+html.light .settings-title { color: #00875A !important; }
+html.light .settings-section-title { color: #1F1F1F !important; }
+html.light .settings-section-desc { color: #5F6368 !important; }
+
+/* Componentes S object */
+html.light .settings-label { color: #5F6368 !important; }
+html.light .settings-input {
+  background: #F0F4F8 !important;
+  border-color: #DADCE0 !important;
+  color: #1F1F1F !important;
+}
+html.light .settings-input:focus {
+  border-color: #00875A !important;
+  box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important;
+  background: #FFFFFF !important;
+}
+html.light .settings-btn-primary {
+  background: #00875A !important;
+  color: #FFFFFF !important;
+}
+html.light .settings-btn-primary:hover { background: #00704A !important; }
+html.light .settings-btn-secondary {
+  background: transparent !important;
+  border-color: #DADCE0 !important;
+  color: #00875A !important;
+}
+html.light .settings-btn-secondary:hover {
+  background: rgba(0, 135, 90, 0.04) !important;
+  border-color: #00875A !important;
+}
+html.light .settings-btn-danger {
+  background: #DC2626 !important;
+  color: #FFFFFF !important;
+}
+html.light .settings-btn-danger:disabled { background: rgba(220, 38, 38, 0.5) !important; }
+html.light .settings-divider { background: #E8EAED !important; }
+
+/* Chips */
+html.light .settings-chip {
+  background: #F0F4F8 !important;
+  border-color: transparent !important;
+  color: #5F6368 !important;
+}
+html.light .settings-chip.active {
+  background: rgba(0, 135, 90, 0.1) !important;
+  border-color: #00875A !important;
+  color: #00875A !important;
+}
+
+/* Cards e Caixas */
+html.light .settings-card {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+html.light .settings-highlight-box { background: #F8F9FA !important; border-color: #E8EAED !important; }
+html.light .settings-warning-box { background: #FEF2F2 !important; border-color: #FECACA !important; }
+html.light .settings-warning-box p, html.light .settings-warning-box div { color: #DC2626 !important; }
+html.light .settings-warning-box ul, html.light .settings-warning-box span { color: #B91C1C !important; }
+
+/* Toggle */
+html.light .settings-toggle { background: #E8EAED !important; }
+html.light .settings-toggle.active { background: #00875A !important; }
+html.light .settings-toggle span { background: #FFFFFF !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important; }
+
+/* Feedbacks e Textos em Linha */
+html.light .settings-feedback-success { background: #F0FDF4 !important; border-color: #BBF7D0 !important; color: #15803D !important; }
+html.light .settings-feedback-error { background: #FEF2F2 !important; border-color: #FECACA !important; color: #DC2626 !important; }
+html.light .settings-text-success { color: #00875A !important; }
+html.light .settings-text-error { color: #DC2626 !important; }
+html.light .settings-text-muted { color: #5F6368 !important; }

@@ -1,0 +1,152 @@
+/* ============================================================
+   SCENARIO EXPLORER — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+html.light .se-root { background: transparent !important; }
+html.light .se-controls {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+}
+
+/* Títulos / Headings */
+html.light .se-catalog-title,
+html.light .se-deepdive-title,
+html.light .se-tw-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .se-label, html.light .se-catalog-count, html.light .se-scenario-desc,
+html.light .se-stat-label, html.light .se-dd-score-label, html.light .se-dd-subtitle { color: #5F6368 !important; }
+
+/* Controls */
+html.light .se-input, html.light .se-select { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #1F1F1F !important; }
+html.light .se-input:focus, html.light .se-select:focus { border-color: #00875A !important; background: #FFFFFF !important; box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important; }
+
+html.light .se-suggestions { background: #FFFFFF !important; border-color: #E8EAED !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; }
+html.light .se-sug-item:hover { background: #F8F9FA !important; }
+html.light .se-sug-name { color: #1F1F1F !important; }
+html.light .se-sug-meta { color: #5F6368 !important; }
+
+html.light .se-mode-btn { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #5F6368 !important; }
+html.light .se-mode-btn:hover { background: #E8EAED !important; color: #1F1F1F !important; }
+html.light .se-mode-btn--active { background: rgba(0, 135, 90, 0.08) !important; border-color: #00875A !important; color: #00875A !important; font-weight: 600 !important; }
+
+/* Surfaces */
+html.light .se-baseline,
+html.light .se-catalog,
+html.light .se-deepdive {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Baseline Bar */
+html.light .se-baseline-tag { background: #F0F4F8 !important; color: #5F6368 !important; border-color: #DADCE0 !important; }
+
+/* Scenario Buttons */
+html.light .se-scenario-btn { background: #FFFFFF !important; border-color: #E8EAED !important; }
+html.light .se-scenario-btn:hover { background: #F8F9FA !important; border-color: #DADCE0 !important; }
+html.light .se-scenario-btn--active { background: rgba(0, 135, 90, 0.05) !important; border-color: #00875A !important; }
+
+html.light .se-scenario-name { color: #1F1F1F !important; }
+html.light .se-scenario-id, html.light .se-scenario-deadline { color: #5F6368 !important; background: #F0F4F8 !important; border-color: #DADCE0 !important; }
+html.light .se-cat-group-header { color: #1F1F1F !important; border-bottom-color: #E8EAED !important; }
+html.light .se-cat-group-count { background: #F0F4F8 !important; color: #5F6368 !important; }
+
+html.light .se-deepdive {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .se-dd-score-row,
+html.light .se-signal-row,
+html.light .se-feature-row,
+html.light .se-dd-scores,
+html.light .se-feature-list,
+html.light .se-signal-grid {
+  background: #F8F9FA !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+}
+
+html.light .se-dd-score-row { border-radius: 0.375rem !important; }
+html.light .se-feature-row { border-radius: 0.375rem !important; }
+html.light .se-signal-row { border-radius: 0.375rem !important; }
+
+html.light .se-signal-name,
+html.light .se-signal-base,
+html.light .se-feature-name,
+html.light .se-deepdive-empty,
+html.light .se-deepdive-title,
+html.light .se-dd-subtitle,
+html.light .se-scenario-desc,
+html.light .se-stat-label {
+  color: #1F1F1F !important;
+}
+
+html.light .se-dd-score-val,
+html.light .se-dd-delta,
+html.light .se-dd-changed,
+html.light .se-signal-delta,
+html.light .se-feature-delta,
+html.light .se-stat-val {
+  color: inherit !important;
+}
+
+html.light .se-scenario-btn { background: #FFFFFF !important; border-color: #E8EAED !important; }
+html.light .se-scenario-btn:hover { background: #F8F9FA !important; border-color: #DADCE0 !important; }
+html.light .se-scenario-btn--active { background: rgba(0, 135, 90, 0.05) !important; border-color: #00875A !important; }
+
+/* Top/Worst */
+html.light .se-tw-row { background: #F8F9FA !important; border-color: #E8EAED !important; }
+html.light .se-tw-row:hover { border-color: #DADCE0 !important; }
+html.light .se-tw-row--active { border-color: #00875A !important; background: rgba(0, 135, 90, 0.05) !important; }
+html.light .se-tw-name { color: #1F1F1F !important; }
+html.light .se-tw-cat { color: #5F6368 !important; }
+html.light .se-dd-score-row, html.light .se-signal-row, html.light .se-feature-row { border-bottom-color: #E8EAED !important; }
+
+/* ============================================================
+   SCENARIO EXPLORER — Semântica de cores em falta (light mode)
+   ============================================================ */
+
+/* Deadline — warning semântico (era #FFD166 neon) */
+html.light .se-scenario-deadline { color: #D97706 !important; background: rgba(217,119,6,0.08) !important; border-color: rgba(217,119,6,0.2) !important; }
+
+/* Changed indicator — improving semântico */
+html.light .se-dd-changed { color: #057A55 !important; }
+
+/* Signal delta positivo/negativo — herda cor do valor */
+html.light .se-signal-delta,
+html.light .se-feature-delta,
+html.light .se-tw-delta { color: #0F172A !important; }
+
+/* Sug meta */
+html.light .se-sug-meta { color: #0E9F6E !important; }
+
+/* Cat group header */
+html.light .se-cat-group-header { color: #0F172A !important; border-bottom-color: #E2E8F0 !important; }
+html.light .se-cat-group-count  { background: #F1F5F9 !important; color: #64748B !important; }
+
+/* Baseline */
+html.light .se-baseline-tag    { color: #94A3B8 !important; }
+html.light .se-baseline-score  { color: #0F172A !important; }
+html.light .se-stat-val        { color: #0F172A !important; }
+
+/* Error */
+html.light .se-error {
+  background: rgba(220, 38, 38, 0.06) !important;
+  border-color: rgba(220, 38, 38, 0.25) !important;
+  color: #DC2626 !important;
+}
+
+/* Loading */
+html.light .se-loading { color: #94A3B8 !important; }
+
+/* DD score label */
+html.light .se-dd-score-label { color: #64748B !important; }
+html.light .se-dd-score-val   { color: #0F172A !important; }
+html.light .se-dd-delta       { color: #64748B !important; }
+html.light .se-dd-subtitle    { color: #94A3B8 !important; border-top-color: #E2E8F0 !important; }

@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Brasil",
+        "ISO_A3": "BRA",
+        "POP_EST": 215313498,
+        "CAPITAL": "Brasília"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-60, -30], [-35, -30], [-35, 5], [-60, 5], [-60, -30]]]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "NAME": "Estados Unidos",
+        "ISO_A3": "USA",
+        "POP_EST": 331002651,
+        "CAPITAL": "Washington D.C."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-125, 25], [-65, 25], [-65, 50], [-125, 50], [-125, 25]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "China",
+        "ISO_A3": "CHN", 
+        "POP_EST": 1439323776,
+        "CAPITAL": "Pequim"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[75, 18], [135, 18], [135, 54], [75, 54], [75, 18]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Alemanha",
+        "ISO_A3": "DEU",
+        "POP_EST": 83783942,
+        "CAPITAL": "Berlim"
+      },
+      "geometry": {
+        "type": "Polygon", 
+        "coordinates": [[[5, 47], [15, 47], [15, 55], [5, 55], [5, 47]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Austrália",
+        "ISO_A3": "AUS",
+        "POP_EST": 25499884,
+        "CAPITAL": "Camberra"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113, -44], [154, -44], [154, -10], [113, -10], [113, -44]]]
+      }
+    }
+  ]
+}

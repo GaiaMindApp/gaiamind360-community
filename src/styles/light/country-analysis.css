@@ -1,0 +1,232 @@
+/* ============================================================
+   COUNTRY ANALYSIS PANEL — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+html.light .ca-root {
+  background: transparent !important;
+}
+
+/* Títulos / Headings */
+html.light .ca-header-country,
+html.light .ca-card-title,
+html.light .ca-explain-label,
+html.light .ca-explain-section-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Topbar & Search */
+html.light .ca-search { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #1F1F1F !important; }
+html.light .ca-search:focus { border-color: #00875A !important; background: #FFFFFF !important; box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important; }
+
+html.light .ca-country-chip { background: #FFFFFF !important; border-color: #DADCE0 !important; color: #5F6368 !important; }
+html.light .ca-country-chip:hover { background: #F8F9FA !important; border-color: #00875A !important; color: #1F1F1F !important; }
+html.light .ca-country-chip--active { background: rgba(0, 135, 90, 0.08) !important; border-color: #00875A !important; color: #00875A !important; }
+html.light .ca-chip-icon,
+html.light .ca-chip-name,
+html.light .ca-chip-tier {
+  color: #1F1F1F !important;
+}
+
+html.light .ca-topbar,
+html.light .ca-header-card,
+html.light .ca-forecast-grid,
+html.light .ca-country-strip {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+  color: #1F1F1F !important;
+}
+
+html.light .ca-country-strip { overflow-x: auto !important; }
+html.light .ca-search::placeholder { color: #9AA0A6 !important; }
+html.light .ca-loading,
+html.light .ca-no-results {
+  color: #5F6368 !important;
+}
+html.light .ca-phase--border { border-top-color: #E8EAED !important; }
+html.light .ca-fallback-badge { color: #9A7017 !important; }
+html.light .ca-metrics-grid,
+html.light .ca-two-col,
+html.light .ca-sim-grid {
+  background: transparent !important;
+}
+
+/* Cards & Surfaces */
+html.light .ca-card,
+html.light .ca-metric-card,
+html.light .ca-sim-card,
+html.light .ca-signal-card,
+html.light .ca-sim-card--winner,
+html.light .ca-explain-panel,
+html.light .ca-infobox,
+html.light .ca-forecast-cell,
+html.light .ca-confidence,
+html.light .ca-explain-mode-group,
+html.light .ca-explain-badge {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .ca-signal-neg { color: #DC2626 !important; }
+html.light .ca-signal-pos { color: #057A55 !important; }
+html.light .ca-contrib-row,
+html.light .ca-contrib-header,
+html.light .ca-detail {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+}
+html.light .ca-contrib-row {
+  border: 1px solid #E8EAED !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem !important;
+}
+html.light .ca-bar-track {
+  background: #F0F4F8 !important;
+}
+html.light .ca-bar-fill {
+  box-shadow: none !important;
+}
+html.light .ca-impact-row,
+html.light .ca-sim-card,
+html.light .ca-sim-card--winner,
+html.light .ca-confidence {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  color: #1F1F1F !important;
+}
+html.light .ca-impact-row { box-shadow: inset 0 0 0 1px rgba(232,234,237,0.8) !important; }
+html.light .ca-sim-card--winner { background: rgba(0, 135, 90, 0.08) !important; }
+html.light .ca-sim-val { color: #1F1F1F !important; }
+html.light .ca-sim-footer { color: #5F6368 !important; }
+
+/* Textos e Labels */
+html.light .ca-header-score-label,
+html.light .ca-card-sub,
+html.light .ca-metric-label,
+html.light .ca-metric-sub,
+html.light .ca-contrib-label,
+html.light .ca-forecast-label,
+html.light .ca-impact-label,
+html.light .ca-sim-label {
+  color: #5F6368 !important;
+}
+
+html.light .ca-header-country,
+html.light .ca-card-title,
+html.light .ca-card-sub,
+html.light .ca-signal-tag,
+html.light .ca-signal-text,
+html.light .ca-signal-strategy,
+html.light .ca-metric-label,
+html.light .ca-metric-sub,
+html.light .ca-contrib-label,
+html.light .ca-diagnosis,
+html.light .ca-forecast-label,
+html.light .ca-phase-label,
+html.light .ca-phase-text,
+html.light .ca-warning,
+html.light .ca-impact-label,
+html.light .ca-sim-label,
+html.light .ca-sim-footer,
+html.light .ca-confidence,
+html.light .ca-explain-badge,
+html.light .ca-explain-badge--ai,
+html.light .ca-explain-badge--fallback,
+html.light .ca-explain-text,
+html.light .ca-explain-bullet,
+html.light .ca-explain-para,
+html.light .ca-header-icon,
+html.light .ca-header-left,
+html.light .ca-header-right,
+html.light .ca-header-row,
+html.light .ca-explain-controls,
+html.light .ca-explain-header,
+html.light .ca-explain-meta,
+html.light .ca-explain-row,
+html.light .ca-explain-spacer {
+  color: #1F1F1F !important;
+}
+
+html.light .ca-header-verdict,
+html.light .ca-header-score,
+html.light .ca-header-system,
+html.light .ca-contrib-val,
+html.light .ca-contrib-dom,
+html.light .ca-forecast-val,
+html.light .ca-impact-val,
+html.light .ca-metric-value,
+html.light .ca-sim-val {
+  color: inherit !important;
+}
+
+html.light .ca-sim-winner { color: #00875A !important; background: rgba(0, 135, 90, 0.1) !important; }
+
+/* Componentes menores */
+html.light .ca-bar-track { background: #E8EAED !important; }
+html.light .ca-impact-row { border-bottom-color: #E8EAED !important; }
+
+/* Explain controls */
+html.light .ca-explain-mode-btn { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #5F6368 !important; white-space: nowrap !important; }
+html.light .ca-explain-mode-btn:hover { background: #E8EAED !important; color: #1F1F1F !important; }
+html.light .ca-explain-mode-btn--active { background: rgba(0, 135, 90, 0.08) !important; border-color: #00875A !important; color: #00875A !important; font-weight: 600 !important; }
+
+html.light .ca-explain-controls { justify-content: flex-start !important; gap: 0.5rem !important; flex-wrap: wrap !important; }
+html.light .ca-explain-mode-group { flex: 0 0 auto !important; white-space: nowrap !important; }
+html.light .ca-explain-btn { background: #00875A !important; color: #FFFFFF !important; margin-left: 0 !important; }
+html.light .ca-explain-btn:hover:not(:disabled) { background: #00704A !important; }
+html.light .ca-explain-btn:disabled { background: #E8EAED !important; color: #9AA0A6 !important; }
+
+/* ============================================================
+   COUNTRY ANALYSIS — Semântica de cores em falta (light mode)
+   ============================================================ */
+
+/* Fallback badge — warning semântico */
+html.light .ca-fallback-badge { color: #D97706 !important; }
+
+/* Explain badge fallback */
+html.light .ca-explain-badge--fallback {
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  color: #D97706 !important;
+}
+
+/* Explain badge AI */
+html.light .ca-explain-badge--ai {
+  border-color: rgba(14, 159, 110, 0.4) !important;
+  color: #0E9F6E !important;
+}
+
+/* Explain label */
+html.light .ca-explain-label { color: #0E9F6E !important; }
+
+/* Explain panel border */
+html.light .ca-explain-panel {
+  border-left-color: #10B981 !important;
+}
+
+/* Explain section title */
+html.light .ca-explain-section-title {
+  border-bottom-color: #E2E8F0 !important;
+}
+
+/* Sim winner */
+html.light .ca-sim-winner { color: #057A55 !important; background: rgba(5,122,85,0.08) !important; }
+html.light .ca-sim-card--winner { background: rgba(5,122,85,0.06) !important; border-color: #10B981 !important; }
+
+/* Phase border */
+html.light .ca-phase--border { border-top-color: #E2E8F0 !important; }
+
+/* Confidence strong */
+html.light .ca-confidence strong { color: #0F172A !important; }
+
+/* Header system */
+html.light .ca-header-system { color: #64748B !important; }
+
+/* Explain mode btn active */
+html.light .ca-explain-mode-btn--active {
+  background: rgba(5, 122, 85, 0.08) !important;
+  color: #057A55 !important;
+}

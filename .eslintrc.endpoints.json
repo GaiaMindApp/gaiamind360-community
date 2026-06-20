@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "Literal[value=/http:\\/\\/localhost:(8000|8002)/]",
+        "message": "❌ URLs hardcoded não são permitidas. Use API_ENDPOINTS de apiConfigComplete.ts"
+      },
+      {
+        "selector": "TemplateLiteral[quasis.0.value.raw=/http:\\/\\/localhost:(8000|8002)/]",
+        "message": "❌ URLs hardcoded não são permitidas. Use API_ENDPOINTS de apiConfigComplete.ts"
+      }
+    ]
+  }
+}

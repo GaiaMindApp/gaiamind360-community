@@ -1,0 +1,123 @@
+/* ============================================================
+   COMPONENTS BASE — LIGHT MODE GEMINI
+   Análise profunda: Manter hierarquia visual e semântica
+   ============================================================ */
+
+/* Container Base - Fundo branco puro */
+html.light .component-container {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+/* Hero Section - Manter destaque visual */
+html.light .hero-title {
+  color: #0B57D0 !important; /* Azul Google para destaque */
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .hero-subtitle {
+  color: #444746 !important; /* Cinza médio legível */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Section Title - Verde mantido para identidade */
+html.light .section-title {
+  color: #0E9F6E !important; /* Verde GaiaMind adaptado */
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* Card Base - Branco com sombra sutil */
+html.light .card-base {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+html.light .card-base:hover {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  background: #FAFBFC !important;
+}
+
+/* Buttons - Manter hierarquia de ação */
+html.light .btn-primary {
+  background-color: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .btn-primary:hover {
+  background-color: #0842A0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+html.light .btn-secondary {
+  background-color: transparent !important;
+  color: #0B57D0 !important;
+  border: 1px solid #DADCE0 !important;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .btn-secondary:hover {
+  border-color: #0B57D0 !important;
+  background-color: rgba(11, 87, 208, 0.04) !important;
+}
+
+/* Input - Fundo claro com borda visível */
+html.light .input-responsive {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .input-responsive:focus {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1) !important;
+  background: #FFFFFF !important;
+}
+
+html.light .input-responsive::placeholder {
+  color: #5F6368 !important;
+}
+
+/* Badges - Cores semânticas mantidas */
+html.light .badge-up {
+  background-color: rgba(180, 83, 9, 0.1) !important; /* Amarelo/Laranja */
+  color: #B45309 !important;
+  font-weight: 500;
+}
+
+html.light .badge-down {
+  background-color: rgba(220, 38, 38, 0.1) !important; /* Vermelho */
+  color: #DC2626 !important;
+  font-weight: 500;
+}
+
+/* List Item - Fundo claro com hover */
+html.light .list-item {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .list-item:hover {
+  background: #F0F4F8 !important;
+  border-color: #DADCE0 !important;
+}
+
+/* Partner Cards - Feedback visual claro */
+html.light .partner-card:hover .card-base {
+  background: #F8F9FA !important;
+  border-color: #0B57D0 !important;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  html.light .partner-card:active .card-base {
+    background: #F0F4F8 !important;
+    border-color: #0B57D0 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+}

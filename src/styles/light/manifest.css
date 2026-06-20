@@ -1,0 +1,61 @@
+/* ============================================================
+   MANIFEST — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+/* Text overrides for inline styles */
+html.light .manifest-container p,
+html.light .manifest-container span {
+  color: #5F6368 !important; /* Secondary text / Muted text */
+}
+
+/* Primary text in Manifesto */
+html.light .manifest-container p[style*="font-size: clamp(0.85rem"] {
+  color: #1F1F1F !important;
+}
+
+html.light .manifest-container p[style*="fontSize: clamp(0.85rem"] {
+  color: #1F1F1F !important;
+}
+
+/* Titles */
+html.light .manifest-container h1,
+html.light .manifest-container h2 {
+  color: #0E9F6E !important; /* Enterprise Green for manifesto titles */
+}
+
+/* Linear gradient on left border of sections */
+html.light .manifest-container div[style*="linear-gradient"] {
+  background: linear-gradient(to bottom, #0E9F6E, transparent) !important;
+  opacity: 0.3 !important;
+}
+
+/* The quote at the bottom */
+html.light .manifest-container p[style*="italic"] {
+  color: #1F1F1F !important; /* Primary Text */
+}
+
+html.light .manifest-container p[style*="font-weight: 600"],
+html.light .manifest-container p[style*="fontWeight: 600"] {
+  color: #0E9F6E !important;
+}
+
+html.light .manifest-container div[style*="border-top"],
+html.light .manifest-container div[style*="borderTop"] {
+  border-top-color: #E2E8F0 !important;
+}
+
+/* Icons */
+html.light .manifest-container svg {
+  color: #0E9F6E !important;
+}
+
+/* Button override */
+html.light .manifest-container button {
+  box-shadow: 0 4px 12px rgba(14, 159, 110, 0.2) !important;
+}
+
+/* Particles in light mode */
+html.light .manifest-container div[style*="filter: blur"] {
+  background-color: #0E9F6E !important;
+  opacity: 0.1 !important;
+}

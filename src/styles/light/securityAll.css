@@ -1,0 +1,93 @@
+/* ============================================================
+   SECURITY & SECURITY DASHBOARD — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+/* ── 1. SECURITY PAGE (Security.tsx - Utilizadores Comuns) ── */
+
+html.light .security-container {
+  background: #FFFFFF !important;
+}
+
+/* Text overrides */
+html.light .security-container p,
+html.light .security-container span,
+html.light .security-container li {
+  color: #5F6368 !important; /* Muted text */
+}
+
+/* Titles and strong text */
+html.light .security-container h1,
+html.light .security-container h2,
+html.light .security-container h3,
+html.light .security-container strong {
+  color: #00875A !important; /* Enterprise Green */
+}
+
+/* Hero Section Background */
+html.light .security-container div[style*="linear-gradient(to bottom right, #003049, #001a2a)"] {
+  background: linear-gradient(to bottom right, #F8F9FA, #FFFFFF) !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Hero Blur Element & Icon Wrappers */
+html.light .security-container div[style*="filter: blur"],
+html.light .security-container div[style*="background: rgba(0, 230, 118, 0.2)"] {
+  background: rgba(0, 135, 90, 0.1) !important;
+}
+
+/* Icons & Bullet points */
+html.light .security-container svg { color: #00875A !important; }
+html.light .security-container div[style*="background: #00E676"] { background: #00875A !important; }
+
+/* Bottom Manifesto Banner */
+html.light .security-container div[style*="linear-gradient(to bottom right, rgba(0, 48, 73, 0.6)"] {
+  background: linear-gradient(to bottom right, #FFFFFF, rgba(0, 135, 90, 0.05)) !important;
+  border-color: #E8EAED !important;
+}
+
+/* ── 2. SECURITY DASHBOARD (SecurityDashboard.tsx - Admin/Monitor) ── */
+
+html.light .security-dashboard-container {
+  background: #FFFFFF !important;
+}
+
+/* Texts */
+html.light .security-dashboard-container [style*="color: rgba(224,247,250,0.9)"],
+html.light .security-dashboard-container [style*="color: rgba(224, 247, 250, 0.9)"] { color: #1F1F1F !important; }
+html.light .security-dashboard-container [style*="color: rgba(224,247,250,0.6)"],
+html.light .security-dashboard-container [style*="color: rgba(224, 247, 250, 0.6)"],
+html.light .security-dashboard-container [style*="color: rgba(224,247,250,0.4)"],
+html.light .security-dashboard-container [style*="color: rgba(224, 247, 250, 0.4)"] { color: #5F6368 !important; }
+
+/* Semantic Colors Text */
+html.light .security-dashboard-container [style*="color: #00E676"] { color: #00875A !important; }
+html.light .security-dashboard-container [style*="color: #f87171"] { color: #DC2626 !important; }
+html.light .security-dashboard-container [style*="color: #FFD166"] { color: #B45309 !important; }
+
+/* Section Headers, Borders & Cards */
+html.light .security-dashboard-container [style*="background: rgba(0,30,50"],
+html.light .security-dashboard-container [style*="background: rgba(0, 30, 50"] { background: #F8F9FA !important; border-bottom-color: #E8EAED !important; }
+html.light .security-dashboard-container [style*="border-bottom: 1px solid rgba(0,230,118"],
+html.light .security-dashboard-container [style*="borderBottom: 1px solid rgba(0,230,118"] { border-bottom-color: #E8EAED !important; }
+html.light .security-dashboard-container [style*="background: rgba(0,48,73"],
+html.light .security-dashboard-container [style*="background: rgba(0, 48, 73"] { background: #FFFFFF !important; border-color: #E8EAED !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; }
+
+/* Substituição do Fundo Castanho (Warning) — cinzento neutro */
+html.light .security-dashboard-container [style*="background: rgba(120,53,15"],
+html.light .security-dashboard-container [style*="background: rgba(120, 53, 15"] { background: #F8F9FA !important; border-color: #E2E8F0 !important; color: #475569 !important; }
+
+/* 🎯 Substituição do Fundo Vermelho Escuro (Error) */
+html.light .security-dashboard-container [style*="background: rgba(127,29,29"],
+html.light .security-dashboard-container [style*="background: rgba(127, 29, 29"] { background: #FEF2F2 !important; border-color: #FECACA !important; color: #DC2626 !important; }
+
+/* 🎯 Substituição do Fundo Verde Escuro (Success) */
+html.light .security-dashboard-container [style*="background: rgba(0,78,59"],
+html.light .security-dashboard-container [style*="background: rgba(0, 78, 59"],
+html.light .security-dashboard-container [style*="background: rgba(0,230,118"],
+html.light .security-dashboard-container [style*="background: rgba(0, 230, 118"] { background: rgba(0, 135, 90, 0.08) !important; border-color: rgba(0, 135, 90, 0.2) !important; }
+
+/* Titles & Icons */
+html.light .security-dashboard-container h1,
+html.light .security-dashboard-container h2 { color: #00875A !important; }
+html.light .security-dashboard-container svg { color: #00875A !important; }

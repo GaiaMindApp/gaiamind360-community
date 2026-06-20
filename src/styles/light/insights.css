@@ -1,0 +1,228 @@
+/* ============================================================
+   INSIGHTS — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+html.light .insights-container {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+/* Títulos h1 e h2 negritados com fonte principal (Google Sans) */
+html.light .insights-container h1,
+html.light .insights-container h2,
+html.light .insights-container h3,
+html.light .insights-container h4,
+html.light .insights-container h5,
+html.light .insights-container h6,
+html.light .insights-title,
+html.light .insights-card-title,
+html.light .h2-hero-title,
+html.light .h2-section-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .insights-subtitle,
+html.light .h2-hero-subtitle {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+html.light .insights-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  box-sizing: border-box !important;
+  border-radius: 0.5rem !important;
+}
+
+html.light .insights-card-title {
+  color: #00875A !important;
+}
+
+html.light .insights-comparison-value.positive {
+  color: #057A55 !important;
+}
+html.light .insights-comparison-value.negative {
+  color: #DC2626 !important;
+}
+
+html.light .insights-policy-card,
+html.light .insights-diagnosis {
+  box-sizing: border-box !important;
+}
+
+html.light .ins-sidebar {
+  background: #FFFFFF !important;
+  border-right: 1px solid #E8EAED !important;
+}
+
+html.light .ins-nav-btn,
+html.light .ins-filter-btn {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+html.light .ins-nav-btn:hover,
+html.light .ins-filter-btn:hover {
+  border-color: #00875A !important;
+  background: #F8F9FA !important;
+  color: #1F1F1F !important;
+}
+
+html.light .ins-nav-btn--active,
+html.light .ins-filter-btn--active {
+  border-color: #00875A !important;
+  background: rgba(0, 135, 90, 0.08) !important;
+  color: #00875A !important;
+  font-weight: 600 !important;
+}
+
+/* Overrides para dados embutidos (Overview & Country Panels) */
+html.light .insights-container [style*="color: #00E676"],
+html.light .insights-container [style*="color: rgb(0, 230, 118)"] {
+  color: #00875A !important;
+}
+html.light .insights-container [style*="color: #f87171"],
+html.light .insights-container [style*="color: rgb(248, 113, 113)"] {
+  color: #DC2626 !important;
+}
+html.light .insights-container [style*="color: #FFD166"],
+html.light .insights-container [style*="color: rgb(255, 209, 102)"] {
+  color: #B45309 !important;
+}
+
+html.light .insights-generate-btn {
+  background: #00875A !important;
+  color: #FFFFFF !important;
+}
+
+html.light .insights-generate-btn:hover:not(:disabled) {
+  background: #00704A !important;
+}
+
+html.light .insights-generate-btn:disabled {
+  background: #E8EAED !important;
+  color: #9AA0A6 !important;
+}
+
+html.light .insights-diagnosis,
+html.light .insights-policy-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .insights-diagnosis-title,
+html.light .insights-policy-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .insights-diagnosis-text,
+html.light .insights-policy-description {
+  color: #1F1F1F !important;
+}
+
+html.light .insights-policy-priority.high {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #DC2626 !important;
+}
+
+html.light .insights-policy-priority.medium {
+  background: rgba(245, 158, 11, 0.1) !important;
+  color: #B45309 !important;
+}
+
+html.light .insights-policy-priority.low {
+  background: rgba(11, 87, 208, 0.1) !important;
+  color: #0B57D0 !important;
+}
+
+html.light .ins-mobile-nav,
+html.light .ins-mobile-filters {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+}
+
+html.light .ins-mobile-tab {
+  color: #5F6368 !important;
+}
+
+html.light .ins-mobile-tab:hover {
+  color: #1F1F1F !important;
+}
+
+html.light .ins-mobile-tab--active {
+  color: #00875A !important;
+  border-bottom-color: #00875A !important;
+}
+
+html.light .ins-filter-toggle {
+  background: #F0F4F8 !important;
+  border-color: #DADCE0 !important;
+  color: #5F6368 !important;
+}
+
+html.light .ins-mobile-filter-label {
+  color: #5F6368 !important;
+}
+
+/* ============================================================
+   INSIGHTS — Semântica de cores em falta (light mode)
+   ============================================================ */
+
+/* Timeline events — bordas semânticas preservadas */
+html.light .insights-timeline-event.success {
+  border-left-color: #057A55 !important;
+  background: rgba(5, 122, 85, 0.04) !important;
+}
+html.light .insights-timeline-event.danger {
+  border-left-color: #DC2626 !important;
+  background: rgba(220, 38, 38, 0.04) !important;
+}
+html.light .insights-timeline-event.warning {
+  border-left-color: #D97706 !important;
+  background: rgba(217, 119, 6, 0.04) !important;
+}
+html.light .insights-timeline-event.info {
+  border-left-color: #1D4ED8 !important;
+  background: rgba(29, 78, 216, 0.04) !important;
+}
+
+/* Timeline year e texto */
+html.light .insights-timeline-year { color: #057A55 !important; }
+html.light .insights-timeline-event-text { color: #475569 !important; }
+html.light .insights-timeline-title { color: #0E9F6E !important; }
+
+/* Recommendation dot */
+html.light .insights-recommendation-dot { background: #10B981 !important; }
+html.light .insights-recommendation-text { color: #475569 !important; }
+
+/* Comparison labels */
+html.light .insights-comparison-label { color: #64748B !important; }
+html.light .insights-comparison-title { color: #0F172A !important; }
+
+/* Diagnosis e recommendations */
+html.light .insights-diagnosis-text { color: #475569 !important; }
+html.light .insights-recommendations-title { color: #0E9F6E !important; }
+
+/* Year range inputs */
+html.light .insights-year-range label { color: #64748B !important; }
+html.light .insights-year-range input {
+  background: rgba(14, 159, 110, 0.06) !important;
+  border-color: rgba(14, 159, 110, 0.3) !important;
+  color: #0F172A !important;
+}
+
+/* Containers */
+html.light .insights-timeline,
+html.light .insights-chart-container,
+html.light .insights-comparison-card,
+html.light .insights-recommendations {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+}

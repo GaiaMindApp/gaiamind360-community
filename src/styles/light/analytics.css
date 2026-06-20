@@ -1,0 +1,200 @@
+/* ============================================================
+   ANALYTICS — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+/* Container base */
+html.light .analytics-container {
+  background: #FFFFFF !important;
+}
+
+/* ── 1. Hierarquia de Texto ── */
+html.light .analytics-container p,
+html.light .analytics-container span,
+html.light .analytics-container li {
+  color: #5F6368 !important; /* Secondary / Muted (Cinza médio) */
+}
+
+html.light .analytics-container strong,
+html.light .analytics-container b,
+html.light .analytics-container .text-primary {
+  color: #1F1F1F !important; /* Texto Primário */
+}
+
+html.light .analytics-container h1,
+html.light .analytics-container h2,
+html.light .analytics-container h3,
+html.light .analytics-title {
+  color: #0B57D0 !important; /* Títulos (Azul Google) */
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* ── 2. Cards & Superfícies ── */
+/* Apanha estilos embutidos usados no Dark Mode e classes nominais */
+html.light .analytics-container div[style*="background: rgba(0, 48, 73"],
+html.light .analytics-container div[style*="background: rgba(0,48,73"],
+html.light .analytics-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .analytics-container div[style*="background: rgba(0, 48, 73"]:hover,
+html.light .analytics-container div[style*="background: rgba(0,48,73"]:hover,
+html.light .analytics-card:hover {
+  background: #F8F9FA !important;
+  border-color: #0B57D0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ── 3. Inputs & Controlos ── */
+html.light .analytics-container select,
+html.light .analytics-container input {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #1F1F1F !important;
+}
+
+html.light .analytics-container select:focus,
+html.light .analytics-container input:focus {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1) !important;
+  background: #FFFFFF !important;
+}
+
+/* ── 4. Cores Semânticas / Badges ── */
+/* ✅ Sucesso / Up */
+html.light .analytics-container [style*="color: #00E676"],
+html.light .analytics-container [style*="color: #00e676"] {
+  color: #34A853 !important; /* Verde Google */
+}
+html.light .analytics-container [style*="background: rgba(0, 230, 118"],
+html.light .analytics-container [style*="background: rgba(0,230,118"] {
+  background: rgba(52, 168, 83, 0.1) !important;
+}
+
+/* ⚠️ Aviso / Warning */
+html.light .analytics-container [style*="color: #FFD54F"],
+html.light .analytics-container [style*="color: #ffd54f"] {
+  color: #F59E0B !important; /* Laranja/Amarelo escuro */
+}
+html.light .analytics-container [style*="background: rgba(255, 213, 79"],
+html.light .analytics-container [style*="background: rgba(255,213,79"] {
+  background: rgba(245, 158, 11, 0.1) !important;
+}
+
+/* ❌ Erro / Critical / Down */
+html.light .analytics-container [style*="color: #f87171"],
+html.light .analytics-container [style*="color: #F87171"] {
+  color: #DC2626 !important; /* Vermelho escuro */
+}
+html.light .analytics-container [style*="background: rgba(248, 113, 113"],
+html.light .analytics-container [style*="background: rgba(248,113,113"] {
+  background: rgba(220, 38, 38, 0.1) !important;
+}
+
+/* 🔵 Info */
+html.light .analytics-container [style*="color: #4FC3F7"],
+html.light .analytics-container [style*="color: #4fc3f7"] {
+  color: #0B57D0 !important; /* Azul Google */
+}
+
+/* ── 5. Gráficos (Recharts Base) ── */
+html.light .analytics-container .recharts-text {
+  fill: #5F6368 !important;
+}
+html.light .analytics-container .recharts-cartesian-grid-horizontal line,
+html.light .analytics-container .recharts-cartesian-grid-vertical line {
+  stroke: #E8EAED !important;
+}
+html.light .analytics-container .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* ── 6. Elementos Customizados do Dashboard ── */
+
+/* SVG Chart Customizado */
+html.light .analytics-container .analytics-grid-line,
+html.light .analytics-container .analytics-grid-baseline {
+  stroke: #E8EAED !important;
+}
+html.light .analytics-container .analytics-grid-text,
+html.light .analytics-container .analytics-axis-text {
+  fill: #5F6368 !important;
+}
+html.light .analytics-container .analytics-chart-line {
+  stroke: #0B57D0 !important; /* Azul Google */
+}
+html.light .analytics-container #dauGrad stop[offset="0%"] {
+  stop-color: #0B57D0 !important;
+  stop-opacity: 0.15 !important;
+}
+html.light .analytics-container #dauGrad stop[offset="100%"] {
+  stop-color: #0B57D0 !important;
+  stop-opacity: 0 !important;
+}
+html.light .analytics-container .analytics-crosshair {
+  stroke: rgba(11, 87, 208, 0.2) !important;
+}
+html.light .analytics-container .analytics-hover-dot {
+  fill: #0B57D0 !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Tooltip Customizado */
+html.light .analytics-container .analytics-tooltip {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+html.light .analytics-container .analytics-tooltip-date {
+  color: #5F6368 !important;
+}
+html.light .analytics-container .analytics-tooltip-value {
+  color: #0B57D0 !important;
+}
+
+/* Botões de Filtro e Ação */
+html.light .analytics-container .analytics-filter-btn {
+  background: #F0F4F8 !important;
+  border-color: #DADCE0 !important;
+  color: #5F6368 !important;
+}
+html.light .analytics-container .analytics-filter-btn[style*="font-weight: 600"] {
+  background: rgba(11, 87, 208, 0.08) !important;
+  border-color: #0B57D0 !important;
+  color: #0B57D0 !important;
+}
+html.light .analytics-container .analytics-apply-btn {
+  background: #0B57D0 !important;
+  border-color: #0B57D0 !important;
+  color: #FFFFFF !important;
+}
+html.light .analytics-container .analytics-apply-btn:hover {
+  background: #0842A0 !important;
+}
+html.light .analytics-container .analytics-reset-btn {
+  color: #5F6368 !important;
+}
+
+/* Barras de Progresso & Avatares */
+html.light .analytics-container .analytics-progress-bg {
+  background: #E8EAED !important;
+}
+html.light .analytics-container .analytics-progress-fill {
+  background: #0B57D0 !important;
+}
+html.light .analytics-container .analytics-avatar-bg {
+  background: #F0F4F8 !important;
+}
+html.light .analytics-container .analytics-avatar-bg.top-1 {
+  background: rgba(11, 87, 208, 0.1) !important;
+}
+html.light .analytics-container .analytics-avatar-text {
+  color: #5F6368 !important;
+}
+html.light .analytics-container .analytics-avatar-text.top-1 {
+  color: #0B57D0 !important;
+}

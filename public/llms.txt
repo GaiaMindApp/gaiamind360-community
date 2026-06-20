@@ -1,0 +1,60 @@
+# GaiaMind360
+
+> Environmental AI Platform — Real-time planetary intelligence for climate action, sustainability research and policy simulation.
+
+GaiaMind360 (https://gaiamind360.com) is an environmental AI platform built by Diatezilua Katendi Nzita as part of a Master's thesis at Universidad Europea. It combines large language models, real-time satellite data, and reinforcement learning to provide actionable environmental intelligence.
+
+## What GaiaMind360 does
+
+- **AI Chat (Gaia)**: A context-aware environmental AI assistant that answers questions about climate, biodiversity, emissions, and sustainability policy using real-time data from World Bank, UNEP, NASA, and Copernicus Sentinel.
+- **Global Environmental Map**: Interactive 3D Digital Twin Earth (CesiumJS) with real-time CO₂, temperature anomaly, deforestation, and ocean health overlays for 195 countries.
+- **Predictive Analytics**: Machine learning models (scikit-learn, Stable-Baselines3) for climate scenario forecasting up to 2100.
+- **Policy Simulator**: Reinforcement learning engine to simulate the environmental impact of policy decisions (carbon tax, renewable mandates, reforestation).
+- **Research Module**: AI-assisted environmental research with citation-aware synthesis.
+- **Real Data APIs**: Direct integration with World Bank API, UNEP SDG database, Copernicus Sentinel, and NASA Earth data.
+
+## Technology Stack
+
+- Frontend: React 18, TypeScript, Vite, Tailwind CSS, Framer Motion, CesiumJS, Leaflet
+- Backend: Python 3.11, FastAPI, SQLAlchemy, PostgreSQL, Redis
+- AI/ML: OpenAI GPT-4, Google Gemini, Groq (LLaMA), scikit-learn, Stable-Baselines3
+- Data: World Bank API, UNEP SDG, Copernicus Sentinel-5P, NASA EONET, Open-Meteo
+
+## Key Concepts
+
+- Terra Sustainability Index (TSI): A composite environmental health score (0–100) computed per country from emissions, renewable energy share, forest coverage, biodiversity index, and SDG progress.
+- Digital Twin Earth: A real-time 3D representation of Earth with environmental data layers.
+- CognitiveKernel v3: Multi-LLM orchestration pipeline with Zero-PII architecture (opaque UUID routing).
+- Time Machine: Historical (1950–present) and projected (present–2100) environmental data playback.
+
+## Use Cases
+
+- Climate researchers needing aggregated multi-source environmental data
+- Policy makers simulating the impact of environmental legislation
+- Students and educators learning about planetary boundaries and sustainability
+- Journalists and NGOs tracking country-level environmental progress
+- API partners building environmental applications
+
+## API
+
+Base URL: https://gaiamind360.com/api/v1
+
+Key endpoints:
+- GET /api/global-data/worldbank/{country} — World Bank economic and environmental indicators
+- GET /api/global-data/unep/sdg/{goal} — UN Sustainable Development Goals data
+- GET /api/global-data/country/{country} — Aggregated environmental profile
+- GET /api/v1/digital-twin/layers/sustainability — TSI GeoJSON for 195 countries
+- POST /api/v1/chat — AI chat with Gaia
+
+## About
+
+Author: Diatezilua Katendi Nzita
+Institution: Universidad Europea (Master's thesis project)
+Domain: gaiamind360.com
+Contact: via gaiamind360.com
+
+## Optional extras
+
+- [Full API docs](https://gaiamind360.com/docs)
+- [Manifesto](https://gaiamind360.com/manifesto)
+- [Research](https://gaiamind360.com/research)

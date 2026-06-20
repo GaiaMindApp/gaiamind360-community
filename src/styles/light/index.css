@@ -1,0 +1,32 @@
+/* ============================================================
+   GAIAMIND — LIGHT MODE ENTERPRISE (INDEX)
+   Importa todos os módulos light organizados por componente
+   ============================================================ */
+
+/* Variáveis Globais Enterprise */
+@import './variables.css';
+
+/* Base Components */
+@import './components.css';
+
+/* Semântica de cores — overrides globais */
+@import './semantic-overrides.css';
+
+/* Componentes */
+@import './chat.css';
+@import './home.css';
+@import './insights.css';
+@import './custom-scenario.css';
+@import './outlook.css';
+@import './country-analysis.css';
+@import './policy-simulator.css';
+@import './scenario-explorer.css';
+@import './map.css';
+@import './research.css';
+@import './manifest.css';
+@import './securityAll.css';
+@import './collaboration.css';
+@import './analytics.css';
+@import './monitor.css';
+@import './admin.css';
+@import './settings.css';

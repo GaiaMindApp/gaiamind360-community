@@ -1,0 +1,519 @@
+/* ============================================================
+   HOME 2.0 — LIGHT MODE ENTERPRISE
+   Planetary Intelligence Command Center
+   ============================================================ */
+
+/* Hero Section */
+html.light .h2-hero {
+  background: #F8FAFC !important;
+}
+
+html.light .h2-hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(28, 100, 242, 0.03) 0%, transparent 60%) !important;
+}
+
+html.light .h2-system-badge {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  color: #0E9F6E !important;
+  font-weight: 600;
+}
+
+html.light .h2-system-badge-dot {
+  background: #10B981 !important;
+}
+
+html.light .h2-hero-title {
+  color: #0F172A !important;
+  font-weight: 800;
+}
+
+html.light .h2-hero-title span {
+  color: #0E9F6E !important;
+}
+
+html.light .h2-hero-subtitle {
+  color: #64748B !important;
+}
+
+/* Telemetry */
+html.light .h2-telemetry {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-tele-label {
+  color: #64748B !important;
+  font-weight: 500;
+}
+
+html.light .h2-tele-value {
+  color: #10B981 !important;
+  font-weight: 700;
+}
+
+/* Gaia Score */
+html.light .h2-gaia-score-num {
+  color: #0F172A;
+  font-weight: 800;
+}
+
+html.light .h2-gaia-score-label {
+  color: #64748B !important;
+}
+
+html.light .h2-gaia-score-status {
+  font-weight: 700;
+}
+
+html.light .h2-status-warning {
+  color: #F59E0B !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  background: rgba(245, 158, 11, 0.1) !important;
+}
+
+html.light .h2-status-critical {
+  color: #E02424 !important;
+  border-color: rgba(224, 36, 36, 0.4) !important;
+  background: rgba(224, 36, 36, 0.1) !important;
+}
+
+html.light .h2-status-stable {
+  color: #057A55 !important;
+  border-color: rgba(5, 122, 85, 0.4) !important;
+  background: rgba(5, 122, 85, 0.1) !important;
+}
+
+/* Section Headers */
+html.light .h2-section-tag {
+  color: #94A3B8 !important;
+  border: 1px solid #CBD5E1 !important;
+}
+
+html.light .h2-section-title {
+  color: #0F172A !important;
+  font-weight: 700;
+}
+
+html.light .h2-section-line {
+  background: linear-gradient(to right, #CBD5E1, transparent) !important;
+}
+
+/* KPI Cards */
+html.light .h2-kpi-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+html.light .h2-kpi-card:hover {
+  border-color: #10B981 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+html.light .h2-kpi-card::before {
+  background: linear-gradient(to right, transparent, var(--kpi-accent, #10B981), transparent) !important;
+}
+
+html.light .h2-kpi-icon-wrap {
+  background: rgba(16, 185, 129, 0.1) !important;
+}
+
+html.light .h2-kpi-value {
+  color: #0F172A;
+  font-weight: 800;
+}
+
+html.light .h2-kpi-label {
+  color: #64748B !important;
+  font-weight: 500;
+}
+
+html.light .h2-risk-high {
+  color: #E02424 !important;
+  font-weight: 700;
+}
+
+html.light .h2-risk-medium {
+  color: #F59E0B !important;
+  font-weight: 700;
+}
+
+html.light .h2-risk-low {
+  color: #057A55 !important;
+  font-weight: 700;
+}
+
+/* AI Intelligence Cards */
+html.light .h2-intel-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-intel-card:hover {
+  border-color: #10B981 !important;
+}
+
+html.light .h2-type-anomaly {
+  color: #E02424 !important;
+  background: rgba(224, 36, 36, 0.1) !important;
+  border: 1px solid rgba(224, 36, 36, 0.3) !important;
+  font-weight: 700;
+}
+
+html.light .h2-type-risk {
+  color: #F59E0B !important;
+  background: rgba(245, 158, 11, 0.1) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  font-weight: 700;
+}
+
+html.light .h2-type-positive {
+  color: #057A55 !important;
+  background: rgba(5, 122, 85, 0.1) !important;
+  border: 1px solid rgba(5, 122, 85, 0.3) !important;
+  font-weight: 700;
+}
+
+html.light .h2-intel-title {
+  color: #0F172A !important;
+  font-weight: 700;
+}
+
+html.light .h2-intel-body {
+  color: #64748B !important;
+}
+
+html.light .h2-intel-meta {
+  color: #94A3B8 !important;
+}
+
+html.light .h2-conf-bar {
+  background: #E2E8F0 !important;
+}
+
+html.light .h2-conf-fill {
+  background: #10B981 !important;
+}
+
+/* Forecast Cards */
+html.light .h2-forecast-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-forecast-title {
+  color: #0F172A !important;
+  font-weight: 700;
+}
+
+html.light .h2-model-badge {
+  color: #1C64F2 !important;
+  background: rgba(28, 100, 242, 0.1) !important;
+  border: 1px solid rgba(28, 100, 242, 0.3) !important;
+  font-weight: 600;
+}
+
+/* Risk Table */
+html.light .h2-risk-table th {
+  color: #64748B !important;
+  border-bottom: 2px solid #E2E8F0 !important;
+  font-weight: 600;
+}
+
+/* TD sem inline styles */
+html.light .h2-risk-table tbody tr td:first-child {
+  color: #0F172A !important;
+  font-weight: 600;
+}
+
+html.light .h2-risk-table td {
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+
+html.light .h2-risk-table tr:hover td {
+  background: #F8F9FA !important;
+}
+
+html.light .h2-dot-low {
+  background: #057A55 !important;
+  box-shadow: 0 0 6px rgba(5, 122, 85, 0.4);
+}
+
+html.light .h2-dot-medium {
+  background: #F59E0B !important;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+
+html.light .h2-dot-high {
+  background: #E02424 !important;
+  box-shadow: 0 0 6px rgba(224, 36, 36, 0.4);
+}
+
+html.light .h2-score-bar {
+  background: #E2E8F0 !important;
+}
+
+html.light .h2-score-bar-fill {
+  /* Manter cor inline do barColor */
+}
+
+/* TSI v9 - Manter cores semânticas CRÍTICO */
+/* Capturar por fontWeight para pegar os números TSI */
+html.light .h2-risk-table td[style*="font-weight: 700"] {
+  /* Não sobrescrever - deixar inline styles funcionarem */
+}
+
+/* Capturar elementos com cores específicas */
+html.light .h2-risk-table td[style*="#00E676"],
+html.light .h2-risk-table td[style*="#00e676"] {
+  color: #34A853 !important;
+}
+
+html.light .h2-risk-table td[style*="#4FC3F7"],
+html.light .h2-risk-table td[style*="#4fc3f7"] {
+  color: #0B57D0 !important;
+}
+
+html.light .h2-risk-table td[style*="#FFD54F"],
+html.light .h2-risk-table td[style*="#ffd54f"] {
+  color: #F59E0B !important;
+}
+
+html.light .h2-risk-table td[style*="#FF8C42"],
+html.light .h2-risk-table td[style*="#ff8c42"] {
+  color: #EA580C !important;
+}
+
+html.light .h2-risk-table td[style*="#f87171"],
+html.light .h2-risk-table td[style*="#F87171"] {
+  color: #DC2626 !important;
+}
+
+html.light .h2-risk-table td[style*="#FF2222"],
+html.light .h2-risk-table td[style*="#ff2222"],
+html.light .h2-risk-table td[style*="#FF4444"],
+html.light .h2-risk-table td[style*="#ff4444"] {
+  color: #DC2626 !important;
+}
+
+/* S/T Scores e outros spans */
+html.light .h2-risk-table td span[style*="#00E676"],
+html.light .h2-risk-table td span[style*="#00e676"] {
+  color: #34A853 !important;
+}
+
+html.light .h2-risk-table td span[style*="#f87171"],
+html.light .h2-risk-table td span[style*="#F87171"] {
+  color: #DC2626 !important;
+}
+
+html.light .h2-risk-table td span[style*="#FF2222"],
+html.light .h2-risk-table td span[style*="#ff2222"],
+html.light .h2-risk-table td span[style*="#FF4444"],
+html.light .h2-risk-table td span[style*="#ff4444"] {
+  color: #DC2626 !important;
+}
+
+html.light .h2-risk-table td span[style*="#FF8C42"],
+html.light .h2-risk-table td span[style*="#ff8c42"] {
+  color: #EA580C !important;
+}
+
+html.light .h2-risk-table td span[style*="#FFD54F"],
+html.light .h2-risk-table td span[style*="#ffd54f"] {
+  color: #F59E0B !important;
+}
+
+html.light .h2-risk-table td span[style*="#4FC3F7"],
+html.light .h2-risk-table td span[style*="#4fc3f7"] {
+  color: #0B57D0 !important;
+}
+
+/* Risk dots com background inline */
+html.light .h2-risk-dot[style*="background: #FF2222"],
+html.light .h2-risk-dot[style*="background: #ff2222"],
+html.light .h2-risk-dot[style*="background: #FF4444"],
+html.light .h2-risk-dot[style*="background: #ff4444"] {
+  background: #DC2626 !important;
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.6) !important;
+}
+
+html.light .h2-risk-dot[style*="background: #FF8C42"],
+html.light .h2-risk-dot[style*="background: #ff8c42"] {
+  background: #EA580C !important;
+  box-shadow: 0 0 6px rgba(234, 88, 12, 0.6) !important;
+}
+
+html.light .h2-risk-dot[style*="background: #FFD54F"],
+html.light .h2-risk-dot[style*="background: #ffd54f"] {
+  background: #F59E0B !important;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.6) !important;
+}
+
+html.light .h2-risk-dot[style*="background: #00E676"],
+html.light .h2-risk-dot[style*="background: #00e676"] {
+  background: #34A853 !important;
+  box-shadow: 0 0 6px rgba(52, 168, 83, 0.6) !important;
+}
+
+/* Policy Cards */
+html.light .h2-policy-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-policy-title {
+  color: #0F172A !important;
+  font-weight: 700;
+}
+
+html.light .h2-policy-desc {
+  color: #64748B !important;
+}
+
+html.light .h2-policy-pct {
+  color: #057A55 !important;
+  font-weight: 800;
+}
+
+html.light .h2-policy-pct-label {
+  color: #64748B !important;
+}
+
+/* Research Cards */
+html.light .h2-research-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-research-card:hover {
+  border-color: #10B981 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+html.light .h2-research-type {
+  color: #1C64F2 !important;
+  font-weight: 600;
+}
+
+html.light .h2-research-title {
+  color: #0F172A !important;
+  font-weight: 700;
+}
+
+html.light .h2-research-meta {
+  color: #94A3B8 !important;
+}
+
+/* Activity Feed */
+html.light .h2-feed-item {
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+
+html.light .h2-feed-dot {
+  background: #10B981 !important;
+}
+
+html.light .h2-feed-time {
+  color: #94A3B8 !important;
+}
+
+html.light .h2-feed-text {
+  color: #64748B !important;
+}
+
+html.light .h2-feed-tag {
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #0E9F6E !important;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-weight: 600;
+}
+
+/* Section Wrapper */
+html.light .h2-section {
+  background: #F8FAFC !important;
+}
+
+html.light .h2-divider {
+  background: linear-gradient(to right, transparent, #CBD5E1, transparent) !important;
+}
+
+/* SOLUÇÃO ALTERNATIVA: Capturar por posição da coluna */
+/* Coluna TSI V9 (5ª coluna) */
+html.light .h2-risk-table tbody tr td:nth-child(5) {
+  /* Número TSI com cor */
+}
+
+html.light .h2-risk-table tbody tr td:nth-child(5) span:first-child {
+  /* Manter cor inline do TSI score */
+}
+
+/* Coluna S/T (6ª coluna) */
+html.light .h2-risk-table tbody tr td:nth-child(6) span:first-child {
+  color: #34A853 !important; /* S sempre verde */
+}
+
+html.light .h2-risk-table tbody tr td:nth-child(6) span:last-child {
+  color: #DC2626 !important; /* T sempre vermelho */
+}
+
+/* Coluna Index (4ª coluna) - manter cor inline */
+html.light .h2-risk-table tbody tr td:nth-child(4) {
+  font-weight: 700;
+}
+
+/* Predictive Section - KPI Cards */
+html.light [style*="background: rgba(13, 31, 45"] {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+}
+
+/* Predictive - Trend Colors (manter semânticas) */
+html.light [style*="color: #00e676"][style*="font-weight: 700"] {
+  color: #34A853 !important; /* Verde - decrease */
+}
+
+html.light [style*="color: #4fc3f7"][style*="font-weight: 700"] {
+  color: #0B57D0 !important; /* Azul - stable */
+}
+
+html.light [style*="color: #f87171"][style*="font-weight: 700"] {
+  color: #DC2626 !important; /* Vermelho - increase */
+}
+
+/* Predictive - Badges e Labels */
+html.light [style*="background: rgba(0, 230, 118, 0.05)"] {
+  background: rgba(52, 168, 83, 0.08) !important;
+  border-color: rgba(52, 168, 83, 0.3) !important;
+}
+
+/* Gráfico TSI Pareto - Manter cores */
+html.light .recharts-scatter circle[fill="#00e676"] {
+  fill: #34A853 !important;
+}
+
+html.light .recharts-scatter circle[fill="#4fc3f7"] {
+  fill: #0B57D0 !important;
+}
+
+html.light .recharts-scatter circle[fill="#ffd54f"] {
+  fill: #F59E0B !important;
+}
+
+html.light .recharts-scatter circle[fill="#ff9800"] {
+  fill: #EA580C !important;
+}
+
+html.light .recharts-scatter circle[fill="#f87171"] {
+  fill: #DC2626 !important;
+}

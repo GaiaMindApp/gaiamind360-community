@@ -1,0 +1,59 @@
+/* ============================================================
+   POLICY SIMULATOR PANEL — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+html.light .ps-root { background: transparent !important; }
+html.light .ps-selectors {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+}
+
+/* Títulos / Headings */
+html.light .ps-title,
+html.light .ps-card-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html.light .ps-card-sub, html.light .ps-label, html.light .ps-metric-label, html.light .ps-sim-footer { color: #5F6368 !important; }
+
+/* Selectors e Inputs */
+html.light .ps-tier-btn { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #5F6368 !important; }
+html.light .ps-tier-btn:hover { background: #E8EAED !important; color: #1F1F1F !important; }
+html.light .ps-tier-btn--active { background: rgba(0, 135, 90, 0.08) !important; border-color: #00875A !important; color: #00875A !important; font-weight: 600 !important; }
+
+html.light .ps-country-input { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #1F1F1F !important; }
+html.light .ps-country-input:focus { border-color: #00875A !important; background: #FFFFFF !important; box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important; }
+
+html.light .ps-suggestions { background: #FFFFFF !important; border-color: #E8EAED !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; }
+html.light .ps-suggestion-item:hover { background: #F8F9FA !important; }
+html.light .ps-sug-name { color: #1F1F1F !important; }
+html.light .ps-sug-meta { color: #5F6368 !important; }
+
+/* Cards & Surfaces */
+html.light .ps-metric-card,
+html.light .ps-card,
+html.light .ps-final-card {
+  background: #FFFFFF !important;
+  border-color: #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .ps-metric-value { color: #1F1F1F !important; }
+
+/* Tabs */
+html.light .ps-action-tab { background: #F0F4F8 !important; border-color: #DADCE0 !important; color: #5F6368 !important; }
+html.light .ps-action-tab:hover { background: #E8EAED !important; color: #1F1F1F !important; }
+html.light .ps-action-tab--active { background: rgba(0, 135, 90, 0.08) !important; border-color: #00875A !important; color: #00875A !important; font-weight: 600 !important; }
+
+/* List & Grid */
+html.light .ps-action-row {
+  background: #F8F9FA !important;
+  border-bottom-color: #E8EAED !important;
+}
+html.light .ps-action-name { color: #1F1F1F !important; }
+html.light .ps-final-label { color: #5F6368 !important; }
+html.light .ps-final-val { color: #1F1F1F !important; }
+html.light .ps-final-card--winner { border-color: #00875A !important; background: rgba(0, 135, 90, 0.05) !important; }
+html.light .ps-winner-text, html.light .ps-winner-text strong { color: #00875A !important; }

@@ -1,0 +1,162 @@
+/* ============================================================
+   RISK TABLE SEMANTIC CLASSES — ENTERPRISE APPROACH
+   Sistema de classes para substituir inline styles
+   ============================================================ */
+
+/* ── TSI Classification Colors ────────────────────────────── */
+.tsi-highly-sustainable {
+  color: #00E676 !important;
+  font-weight: 700;
+}
+
+.tsi-approaching-sustainable {
+  color: #4FC3F7 !important;
+  font-weight: 700;
+}
+
+.tsi-transitioning {
+  color: #FFD54F !important;
+  font-weight: 700;
+}
+
+.tsi-at-risk {
+  color: #FF8C42 !important;
+  font-weight: 700;
+}
+
+.tsi-unsustainable {
+  color: #f87171 !important;
+  font-weight: 700;
+}
+
+/* ── Risk Level Colors ──────────────────────────────────── */
+.risk-critical {
+  color: #FF2222 !important;
+  font-weight: 600;
+}
+
+.risk-high {
+  color: #FF4444 !important;
+  font-weight: 600;
+}
+
+.risk-watchlist {
+  color: #FF8C42 !important;
+  font-weight: 600;
+}
+
+.risk-medium {
+  color: #FFD54F !important;
+  font-weight: 600;
+}
+
+.risk-low {
+  color: #00E676 !important;
+  font-weight: 600;
+}
+
+/* ── S/T Score Colors ───────────────────────────────────── */
+.score-s {
+  color: #00E676 !important;
+}
+
+.score-t {
+  color: #f87171 !important;
+}
+
+/* ── Light Mode Overrides ───────────────────────────────── */
+html.light .tsi-highly-sustainable {
+  color: #34A853 !important;
+}
+
+html.light .tsi-approaching-sustainable {
+  color: #0B57D0 !important;
+}
+
+html.light .tsi-transitioning {
+  color: #F59E0B !important;
+}
+
+html.light .tsi-at-risk {
+  color: #EA580C !important;
+}
+
+html.light .tsi-unsustainable {
+  color: #DC2626 !important;
+}
+
+html.light .risk-critical,
+html.light .risk-high {
+  color: #DC2626 !important;
+}
+
+html.light .risk-watchlist {
+  color: #EA580C !important;
+}
+
+html.light .risk-medium {
+  color: #F59E0B !important;
+}
+
+html.light .risk-low {
+  color: #34A853 !important;
+}
+
+html.light .score-s {
+  color: #34A853 !important;
+}
+
+html.light .score-t {
+  color: #DC2626 !important;
+}
+
+/* ── Risk Dots ──────────────────────────────────────────── */
+.risk-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.risk-dot-critical,
+.risk-dot-high {
+  background: #FF2222;
+  box-shadow: 0 0 6px rgba(255, 34, 34, 0.8);
+}
+
+.risk-dot-watchlist {
+  background: #FF8C42;
+  box-shadow: 0 0 6px rgba(255, 140, 66, 0.8);
+}
+
+.risk-dot-medium {
+  background: #FFD54F;
+  box-shadow: 0 0 6px rgba(255, 213, 79, 0.8);
+}
+
+.risk-dot-low {
+  background: #00E676;
+  box-shadow: 0 0 6px rgba(0, 230, 118, 0.8);
+}
+
+html.light .risk-dot-critical,
+html.light .risk-dot-high {
+  background: #DC2626;
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.6);
+}
+
+html.light .risk-dot-watchlist {
+  background: #EA580C;
+  box-shadow: 0 0 6px rgba(234, 88, 12, 0.6);
+}
+
+html.light .risk-dot-medium {
+  background: #F59E0B;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
+}
+
+html.light .risk-dot-low {
+  background: #34A853;
+  box-shadow: 0 0 6px rgba(52, 168, 83, 0.6);
+}

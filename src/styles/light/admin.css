@@ -1,0 +1,303 @@
+/* ============================================================
+   ADMIN — LIGHT MODE ENTERPRISE
+   Análise profunda: Estados, alertas e métricas visíveis
+   ============================================================ */
+
+/* Container */
+html.light .admin-container {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+/* Header */
+html.light .admin-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .admin-subtitle {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Cards */
+html.light .admin-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .admin-card-title {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* AI Model Display */
+html.light .ai-model-display {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .model-name {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .model-provider {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Metrics - Cores semânticas claras */
+html.light .metric-card {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .metric-label {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+}
+
+html.light .metric-value {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* Metrics Details */
+html.light .metrics-details {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .detail-row span {
+  color: #5F6368 !important;
+}
+
+html.light .detail-row strong {
+  color: #1F1F1F !important;
+  font-weight: 500;
+}
+
+/* Error Count - Vermelho visível */
+html.light .error-count {
+  color: #DC2626 !important;
+  font-weight: 600;
+}
+
+/* API List - Estados visuais claros */
+html.light .api-item {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+/* API Status Dots - Cores semânticas */
+html.light .api-status-dot.connected {
+  background-color: #34A853 !important; /* Verde Google */
+  box-shadow: 0 0 0 2px rgba(52, 168, 83, 0.2);
+}
+
+html.light .api-status-dot.disconnected {
+  background-color: #DC2626 !important; /* Vermelho */
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
+html.light .api-status-dot.error {
+  background-color: #F59E0B !important; /* Amarelo/Laranja */
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+  animation: pulse 2s infinite;
+}
+
+html.light .api-name {
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+html.light .api-sync-time {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* API Error - Vermelho destacado */
+html.light .api-error {
+  color: #DC2626 !important;
+  font-weight: 500;
+  background: rgba(220, 38, 38, 0.1) !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+html.light .api-empty {
+  color: #5F6368 !important;
+}
+
+/* Settings */
+html.light .setting-icon {
+  color: #00875A !important;
+}
+
+html.light .setting-label {
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+html.light .setting-description {
+  color: #5F6368 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .separator {
+  background-color: #E8EAED !important;
+}
+
+/* Select/Input */
+html.light .admin-select,
+html.light .admin-input {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html.light .admin-select:focus,
+html.light .admin-input:focus {
+  border-color: #0B57D0 !important;
+  box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1) !important;
+  background: #FFFFFF !important;
+}
+
+/* Buttons */
+html.light .admin-button-primary {
+  background-color: #0B57D0 !important;
+  color: #FFFFFF !important;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+}
+
+html.light .admin-button-primary:hover {
+  background-color: #0842A0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+html.light .admin-button-secondary {
+  background-color: transparent !important;
+  color: #00875A !important;
+  border: 1px solid #DADCE0 !important;
+  font-family: 'Google Sans', sans-serif;
+}
+
+html.light .admin-button-secondary:hover {
+  border-color: #00875A !important;
+  background-color: rgba(0, 135, 90, 0.04) !important;
+}
+
+/* Switch - Estados claros */
+html.light .admin-switch-slider {
+  background-color: #E8EAED !important;
+  border: 1px solid #DADCE0 !important;
+}
+
+html.light .admin-switch-slider:before {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+html.light .admin-switch input:checked + .admin-switch-slider {
+  background-color: #0B57D0 !important;
+  border-color: #0B57D0 !important;
+}
+
+html.light .admin-switch input:checked + .admin-switch-slider:before {
+  background-color: #FFFFFF !important;
+}
+
+/* Version List */
+html.light .version-item {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+/* Version Dots - Estados visuais */
+html.light .version-dot.latest {
+  background-color: #34A853 !important; /* Verde - versão atual */
+  box-shadow: 0 0 0 2px rgba(52, 168, 83, 0.2);
+}
+
+html.light .version-dot.old {
+  background-color: #DADCE0 !important; /* Cinza - versão antiga */
+}
+
+html.light .version-number {
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+html.light .version-date {
+  color: #5F6368 !important;
+}
+
+html.light .version-commit {
+  color: #5F6368 !important;
+  background: #F0F4F8;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+}
+
+html.light .version-notes {
+  color: #5F6368 !important;
+}
+
+html.light .version-deployed {
+  color: #5F6368 !important;
+}
+
+html.light .version-empty {
+  color: #5F6368 !important;
+}
+
+/* Labels */
+html.light .admin-label {
+  color: #1F1F1F !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* Loading State */
+html.light .loading-spinner {
+  color: #0B57D0 !important;
+}
+
+html.light .loading-state p {
+  color: #5F6368 !important;
+}
+
+/* Error State - Vermelho destacado */
+html.light .admin-error {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  color: #DC2626 !important;
+}
+
+html.light .admin-error span {
+  color: #DC2626 !important;
+  font-weight: 500;
+}
+
+html.light .error-icon {
+  color: #DC2626 !important;
+}
+
+/* Button Spinner */
+html.light .button-spinner {
+  color: currentColor;
+}

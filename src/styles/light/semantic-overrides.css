@@ -1,0 +1,142 @@
+/* ============================================================
+   SEMANTIC OVERRIDES — LIGHT MODE
+   Cobre todos os estados visuais que não tinham override light:
+   h2-dot-*, GlobalStatsPanel, inline semantic colors, etc.
+   ============================================================ */
+
+/* ── h2-dot-* (Home 2.0 risk dots) ─────────────────────────── */
+html.light .h2-dot-low {
+  background: #057A55 !important;
+  box-shadow: 0 0 4px rgba(5, 122, 85, 0.5) !important;
+}
+html.light .h2-dot-medium {
+  background: #D97706 !important;
+  box-shadow: 0 0 4px rgba(217, 119, 6, 0.5) !important;
+}
+html.light .h2-dot-high {
+  background: #DC2626 !important;
+  box-shadow: 0 0 4px rgba(220, 38, 38, 0.5) !important;
+}
+
+/* ── GlobalStatsPanel — var(--color-warning) agora definido ── */
+/* O token --color-warning está definido em variables.css (#D97706) */
+/* Garantir que valores numéricos com cor semântica funcionam */
+html.light .stat-value-critical  { color: var(--color-critical)  !important; }
+html.light .stat-value-warning   { color: var(--color-warning)   !important; }
+html.light .stat-value-stable    { color: var(--color-stable)    !important; }
+html.light .stat-value-improving { color: var(--color-improving) !important; }
+html.light .stat-value-info      { color: var(--color-info)      !important; }
+
+/* ── Verdict badges genéricos ───────────────────────────────── */
+html.light .verdict-critical,
+html.light .verdict-unsustainable {
+  color: #DC2626 !important;
+  background: rgba(220, 38, 38, 0.08) !important;
+  border-color: rgba(220, 38, 38, 0.25) !important;
+}
+html.light .verdict-at-risk,
+html.light .verdict-high {
+  color: #EA580C !important;
+  background: rgba(234, 88, 12, 0.08) !important;
+  border-color: rgba(234, 88, 12, 0.25) !important;
+}
+html.light .verdict-warning,
+html.light .verdict-watchlist {
+  color: #D97706 !important;
+  background: rgba(217, 119, 6, 0.08) !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+}
+html.light .verdict-stable,
+html.light .verdict-transitioning {
+  color: #1D4ED8 !important;
+  background: rgba(29, 78, 216, 0.08) !important;
+  border-color: rgba(29, 78, 216, 0.25) !important;
+}
+html.light .verdict-improving,
+html.light .verdict-approaching-sustainable {
+  color: #0E9F6E !important;
+  background: rgba(14, 159, 110, 0.08) !important;
+  border-color: rgba(14, 159, 110, 0.25) !important;
+}
+html.light .verdict-highly-sustainable {
+  color: #057A55 !important;
+  background: rgba(5, 122, 85, 0.08) !important;
+  border-color: rgba(5, 122, 85, 0.25) !important;
+}
+
+/* ── Tier badges ────────────────────────────────────────────── */
+html.light .tier-1 { color: #057A55 !important; background: rgba(5,122,85,0.08) !important; }
+html.light .tier-2 { color: #0E9F6E !important; background: rgba(14,159,110,0.08) !important; }
+html.light .tier-3 { color: #D97706 !important; background: rgba(217,119,6,0.08) !important; }
+html.light .tier-4 { color: #DC2626 !important; background: rgba(220,38,38,0.08) !important; }
+
+/* ── Progress / score bars ──────────────────────────────────── */
+html.light .progress-bar-track { background: #E2E8F0 !important; }
+html.light .score-bar-track    { background: #E2E8F0 !important; }
+
+/* ── Inline semantic color overrides (06D6A0 teal) ─────────── */
+html.light [style*="color: #06D6A0"],
+html.light [style*="color: #06d6a0"],
+html.light [style*="color: rgb(6, 214, 160)"] {
+  color: #057A55 !important;
+}
+
+/* ── Orange / At Risk inline ────────────────────────────────── */
+html.light [style*="color: #FF8C42"],
+html.light [style*="color: #ff8c42"],
+html.light [style*="color: #FF9800"],
+html.light [style*="color: #ff9800"] {
+  color: #EA580C !important;
+}
+
+/* ── Vermelho crítico inline ────────────────────────────────── */
+html.light [style*="color: #FF2222"],
+html.light [style*="color: #FF4444"],
+html.light [style*="color: #ef4444"],
+html.light [style*="color: rgb(239, 68, 68)"],
+html.light [style*="color: rgb(255, 34, 34)"] {
+  color: #DC2626 !important;
+}
+
+/* ── Verde improving inline ─────────────────────────────────── */
+html.light [style*="color: #22c55e"],
+html.light [style*="color: rgb(34, 197, 94)"] {
+  color: #057A55 !important;
+}
+
+/* ── Amarelo eab308 (Tailwind yellow) ───────────────────────── */
+html.light [style*="color: #eab308"],
+html.light [style*="color: rgb(234, 179, 8)"] {
+  color: #D97706 !important;
+}
+
+/* ── Eliminar o castanho rgba(120,53,15) em todo o projecto ─── */
+/* Este tom escuro (dark mode warning bg) não tem lugar no light mode.
+   Substituído por cinzento neutro enterprise em qualquer componente. */
+
+html.light [style*="background: rgba(120,53,15"],
+html.light [style*="background: rgba(120, 53, 15"] {
+  background: #F8F9FA !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* latMid usa background directo sem "background:" prefix — cobrir também */
+html.light [style*="rgba(120,53,15"],
+html.light [style*="rgba(120, 53, 15"] {
+  background: #F8F9FA !important;
+  border-color: #E2E8F0 !important;
+  color: #475569 !important;
+}
+
+/* Eliminar também o redBg castanho-escuro rgba(127,29,29) globalmente */
+html.light [style*="background: rgba(127,29,29"],
+html.light [style*="background: rgba(127, 29, 29"] {
+  background: #FEF2F2 !important;
+  border-color: #FECACA !important;
+}
+
+/* Garantir que textos sobre esses fundos ficam legíveis */
+html.light [style*="rgba(120,53,15"] > *:not([style*="color"]),
+html.light [style*="rgba(120, 53, 15"] > *:not([style*="color"]) {
+  color: #475569 !important;
+}

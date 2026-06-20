@@ -1,0 +1,652 @@
+/* ============================================================
+   GAIAMIND — SISTEMA DE TEMAS
+   Dark (default) + Light mode
+   Paleta light desenhada para igualar a qualidade visual do dark
+   ============================================================ */
+
+/* ── Variáveis CSS — Dark (default) ─────────────────────────────────────── */
+:root {
+  --color-primary:       #00E676;
+  --color-primary-dark:  #00B359;
+  --color-primary-light: #69F0AE;
+
+  --bg-page:     #071318;
+  --bg-surface:  rgba(0, 48, 73, 0.95);
+  --bg-surface2: rgba(0, 48, 73, 0.92);
+  --bg-input:    rgba(0, 48, 73, 0.88);
+
+  --text-primary:   #E0F7FA;
+  --text-secondary: rgba(224, 247, 250, 0.72);
+  --text-muted:     rgba(224, 247, 250, 0.35);
+  --text-label:     rgba(224, 247, 250, 0.7);
+
+  --border-subtle: rgba(0, 230, 118, 0.12);
+  --border-normal: rgba(0, 230, 118, 0.25);
+  --border-strong: rgba(0, 230, 118, 0.4);
+
+  --accent-green:  #00E676;
+  --accent-yellow: #FFD54F;
+  --accent-red:    #f87171;
+  --accent-blue:   #4FC3F7;
+  --accent-orange: #FF8C42;
+
+  /* Tokens semânticos explícitos — dark */
+  --color-critical:  #f87171;
+  --color-high:      #FF4444;
+  --color-watchlist: #FF8C42;
+  --color-warning:   #FFD54F;
+  --color-stable:    #00E676;
+  --color-improving: #69F0AE;
+  --color-info:      #4FC3F7;
+
+  /* Backgrounds semânticos */
+  --bg-critical:  rgba(248, 113, 113, 0.1);
+  --bg-warning:   rgba(255, 213, 79, 0.1);
+  --bg-stable:    rgba(0, 230, 118, 0.1);
+  --bg-improving: rgba(105, 240, 174, 0.1);
+  --bg-info:      rgba(79, 195, 247, 0.1);
+
+  --sidebar-bg: #0f172a;
+}
+
+/* ── Variáveis CSS — Light ───────────────────────────────────────────────── */
+html.light {
+  --color-primary:       #10B981;
+  --color-primary-dark:  #0E9F6E;
+  --color-primary-light: #34D399;
+
+  --bg-page:     #F8FAFC;
+  --bg-surface:  #FFFFFF;
+  --bg-surface2: #F1F5F9;
+  --bg-input:    #FFFFFF;
+  --bg-hover:    #ECFDF5;
+
+  /* Hierarquia de texto — nunca colapsar tudo para #000 */
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+  --text-label:     #64748B;
+
+  --border-subtle: #E2E8F0;
+  --border-normal: #CBD5E1;
+  --border-strong: #94A3B8;
+
+  /* Cores semânticas — mesma lógica do dark, ajustadas para fundo claro */
+  --accent-green:  #057A55;   /* Stable / Improving / Positive */
+  --accent-yellow: #D97706;   /* Warning / Caution */
+  --accent-red:    #DC2626;   /* Critical / Danger / Negative */
+  --accent-blue:   #1D4ED8;   /* Info / Neutral */
+  --accent-orange: #EA580C;   /* At Risk / High */
+
+  /* Tokens semânticos explícitos — usados em KPIs, badges, indicadores */
+  --color-critical:  #DC2626;
+  --color-high:      #DC2626;
+  --color-watchlist: #EA580C;
+  --color-warning:   #D97706;
+  --color-stable:    #057A55;
+  --color-improving: #10B981;
+  --color-info:      #1D4ED8;
+
+  /* Backgrounds semânticos (para badges/chips) */
+  --bg-critical:  rgba(220, 38, 38, 0.08);
+  --bg-warning:   rgba(217, 119, 6, 0.08);
+  --bg-stable:    rgba(5, 122, 85, 0.08);
+  --bg-improving: rgba(16, 185, 129, 0.08);
+  --bg-info:      rgba(29, 78, 216, 0.08);
+
+  --sidebar-bg: #FFFFFF;
+
+  /* Sombras */
+  --shadow-card:       0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-header:     0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ── Base dark ───────────────────────────────────────────────────────────── */
+html, body, #root {
+  margin: 0; padding: 0;
+  width: 100%; min-height: 100vh;
+  background: linear-gradient(135deg, #071318 0%, #0a1f2e 50%, #071318 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ============================================================
+   LIGHT MODE — BASE
+   ============================================================ */
+html.light,
+html.light body,
+html.light #root {
+  background: #F8FAFC !important;
+  background-image: none !important;
+  color: #0F172A !important;
+}
+
+/* ============================================================
+   LAYOUT — Header, Sidebar, Main
+   ============================================================ */
+
+html.light .app-container {
+  background: #FFFFFF !important;
+}
+
+/* Header: gradiente teal mais escuro para melhor contraste */
+html.light .app-header {
+  background: linear-gradient(90deg, #0D9488 0%, #0F766E 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+html.light .header-title { color: #FFFFFF !important; }
+html.light .menu-toggle  { color: #FFFFFF !important; }
+html.light .logout-btn {
+  background: rgba(255,255,255,0.15) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+}
+html.light .logout-btn:hover {
+  background: rgba(255,255,255,0.25) !important;
+}
+
+/* Sidebar */
+html.light .app-sidebar {
+  background: #FFFFFF !important;
+  border-right: 1px solid #E2E8F0 !important;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.06) !important;
+}
+html.light .sidebar-item { color: #475569 !important; }
+html.light .sidebar-item:hover {
+  background: rgba(0,135,90,0.08) !important;
+  border-left-color: #00875A !important;
+  color: #00875A !important;
+}
+html.light .sidebar-item.active {
+  background: rgba(0,135,90,0.12) !important;
+  color: #00875A !important;
+  border-left-color: #00875A !important;
+}
+html.light .sidebar-divider { background: #E2E8F0 !important; }
+html.light .sidebar-mobile-header span { color: #0F172A !important; }
+html.light .sidebar-mobile-close {
+  background: rgba(0,0,0,0.05) !important;
+  color: #475569 !important;
+}
+
+/* Main */
+html.light .app-main {
+  background: #F8FAFC !important;
+}
+
+/* ============================================================
+   COMPONENTES CSS — component-container, card-base, etc.
+   ============================================================ */
+
+html.light .component-container {
+  background: #F8FAFC !important;
+  background-image: none !important;
+}
+html.light .card-base {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+html.light .card-base:hover {
+  border-color: #10B981 !important;
+  background: #FAFFFE !important;
+}
+html.light .hero-subtitle { color: #475569 !important; }
+html.light .section-title { color: #0E9F6E !important; }
+html.light .input-responsive {
+  background: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+html.light .list-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+}
+html.light .btn-secondary {
+  color: #0E9F6E !important;
+  border-color: rgba(14,159,110,0.3) !important;
+}
+html.light .badge-up   { color: #D97706 !important; background: rgba(217,119,6,0.1) !important; }
+html.light .badge-down { color: #DC2626 !important; background: rgba(220,38,38,0.1) !important; }
+
+/* ============================================================
+   HOME 2.0 — Classes h2-*
+   ============================================================ */
+
+html.light .h2-hero-title       { color: #0F172A !important; }
+html.light .h2-hero-title span  { color: #0E9F6E !important; }
+html.light .h2-hero-subtitle    { color: #475569 !important; }
+html.light .h2-system-badge {
+  background: rgba(14,159,110,0.08) !important;
+  border-color: rgba(14,159,110,0.25) !important;
+  color: #0E9F6E !important;
+}
+html.light .h2-system-badge-dot { background: #10B981 !important; }
+html.light .h2-telemetry {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+html.light .h2-tele-label { color: #64748B !important; }
+html.light .h2-tele-value { color: #0E9F6E !important; }
+html.light .h2-gaia-score-num   { color: #0F172A; }
+html.light .h2-gaia-score-label { color: #64748B !important; }
+html.light .h2-section-title    { color: #0F172A !important; }
+html.light .h2-section-tag      { color: #475569 !important; border-color: #CBD5E1 !important; }
+html.light .h2-section-line     { background: linear-gradient(to right, rgba(14,159,110,0.3), transparent) !important; }
+html.light .h2-kpi-card {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+html.light .h2-kpi-card:hover   { border-color: #10B981 !important; }
+html.light .h2-kpi-value        { color: #0F172A; }
+html.light .h2-kpi-label        { color: #64748B !important; }
+html.light .h2-kpi-icon-wrap    { background: rgba(14,159,110,0.1) !important; }
+/* Semântica de risco — idêntica ao dark, apenas ajustada para fundo claro */
+html.light .h2-risk-high        { color: #DC2626 !important; }
+html.light .h2-risk-medium      { color: #D97706 !important; }
+html.light .h2-risk-low         { color: #057A55 !important; }
+html.light .h2-intel-card {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+html.light .h2-intel-title      { color: #0F172A !important; }
+html.light .h2-intel-body       { color: #475569 !important; }
+html.light .h2-intel-meta       { color: #64748B !important; }
+html.light .h2-conf-bar         { background: #E2E8F0 !important; }
+/* Badges de tipo — semântica preservada */
+html.light .h2-type-anomaly     { color: #DC2626 !important; background: rgba(220,38,38,0.08) !important; border-color: rgba(220,38,38,0.3) !important; }
+html.light .h2-type-risk        { color: #D97706 !important; background: rgba(217,119,6,0.08) !important; border-color: rgba(217,119,6,0.3) !important; }
+html.light .h2-type-positive    { color: #057A55 !important; background: rgba(5,122,85,0.08) !important; border-color: rgba(5,122,85,0.3) !important; }
+html.light .h2-forecast-card    { background: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important; }
+html.light .h2-forecast-title   { color: #0F172A !important; }
+html.light .h2-model-badge      { color: #1D4ED8 !important; background: rgba(29,78,216,0.08) !important; border-color: rgba(29,78,216,0.25) !important; }
+html.light .h2-risk-table th    { color: #64748B !important; border-bottom-color: #E2E8F0 !important; }
+html.light .h2-risk-table td    { color: #475569 !important; border-bottom-color: #F1F5F9 !important; }
+html.light .h2-risk-table tr:hover td { background: rgba(14,159,110,0.04) !important; }
+html.light .h2-score-bar        { background: #E2E8F0 !important; }
+html.light .h2-policy-card      { background: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important; }
+html.light .h2-policy-title     { color: #0F172A !important; }
+html.light .h2-policy-desc      { color: #475569 !important; }
+html.light .h2-policy-pct       { color: #057A55 !important; }
+html.light .h2-policy-pct-label { color: #64748B !important; }
+html.light .h2-research-card    { background: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important; }
+html.light .h2-research-card:hover { border-color: #10B981 !important; }
+html.light .h2-research-type    { color: #1D4ED8 !important; }
+html.light .h2-research-title   { color: #0F172A !important; }
+html.light .h2-research-meta    { color: #64748B !important; }
+html.light .h2-feed-item        { border-bottom-color: #F1F5F9 !important; }
+html.light .h2-feed-time        { color: #94A3B8 !important; }
+html.light .h2-feed-text        { color: #475569 !important; }
+/* Status badges — semântica idêntica ao dark */
+html.light .h2-status-warning   { color: #D97706 !important; border-color: rgba(217,119,6,0.4) !important; background: rgba(217,119,6,0.08) !important; }
+html.light .h2-status-critical  { color: #DC2626 !important; border-color: rgba(220,38,38,0.4) !important; background: rgba(220,38,38,0.08) !important; }
+html.light .h2-status-stable    { color: #057A55 !important; border-color: rgba(5,122,85,0.4) !important; background: rgba(5,122,85,0.08) !important; }
+html.light .h2-divider          { background: linear-gradient(to right, transparent, #CBD5E1, transparent) !important; }
+
+/* ============================================================
+   INLINE STYLES — Família rgba(224,247,250,*)
+   Texto claro em fundo escuro → hierarquia de texto em fundo claro
+   ============================================================ */
+
+/* Texto primário (opacity 0.8–1.0) → #0F172A */
+html.light [style*="color: rgba(224,247,250,0.8)"],
+html.light [style*="color: rgba(224, 247, 250, 0.8)"],
+html.light [style*="color: rgba(224,247,250,0.9)"],
+html.light [style*="color: rgba(224, 247, 250, 0.9)"],
+html.light [style*="color: rgba(224,247,250,1)"],
+html.light [style*="color: rgba(224, 247, 250, 1)"],
+html.light [style*="color: #E0F7FA"],
+html.light [style*="color: #e0f7fa"],
+html.light [style*="color:#E0F7FA"],
+html.light [style*="color:#e0f7fa"],
+html.light [style*="color: rgb(224, 247, 250)"],
+html.light [style*="color: rgb(224,247,250)"] {
+  color: #0F172A !important;
+}
+
+/* Texto secundário (opacity 0.55–0.75) → #475569 */
+html.light [style*="color: rgba(224,247,250,0.7)"],
+html.light [style*="color: rgba(224, 247, 250, 0.7)"],
+html.light [style*="color: rgba(224,247,250,0.65)"],
+html.light [style*="color: rgba(224, 247, 250, 0.65)"],
+html.light [style*="color: rgba(224,247,250,0.6)"],
+html.light [style*="color: rgba(224, 247, 250, 0.6)"],
+html.light [style*="color: rgba(224,247,250,0.55)"],
+html.light [style*="color: rgba(224, 247, 250, 0.55)"] {
+  color: #475569 !important;
+}
+
+/* Texto muted (opacity 0.3–0.5) → #94A3B8 */
+html.light [style*="color: rgba(224,247,250,0.5)"],
+html.light [style*="color: rgba(224, 247, 250, 0.5)"],
+html.light [style*="color: rgba(224,247,250,0.45)"],
+html.light [style*="color: rgba(224, 247, 250, 0.45)"],
+html.light [style*="color: rgba(224,247,250,0.4)"],
+html.light [style*="color: rgba(224, 247, 250, 0.4)"],
+html.light [style*="color: rgba(224,247,250,0.35)"],
+html.light [style*="color: rgba(224, 247, 250, 0.35)"],
+html.light [style*="color: rgba(224,247,250,0.3)"],
+html.light [style*="color: rgba(224, 247, 250, 0.3)"],
+html.light [style*="color: rgba(224,247,250,0.2)"],
+html.light [style*="color: rgba(224, 247, 250, 0.2)"],
+html.light [style*="color: rgba(138,164,175"],
+html.light [style*="color: rgba(138, 164, 175"],
+html.light [style*="color: #8AA4AF"],
+html.light [style*="color:#8AA4AF"] {
+  color: #94A3B8 !important;
+}
+
+/* ============================================================
+   INLINE STYLES — Família rgba(0,48,73,*) backgrounds
+   Fundo escuro → fundo branco/claro
+   ============================================================ */
+
+html.light [style*="background: rgba(0,48,73"],
+html.light [style*="background: rgba(0, 48, 73"],
+html.light [style*="background: rgba(0,30,50"],
+html.light [style*="background: rgba(0, 30, 50"],
+html.light [style*="background: rgba(0,12,26"],
+html.light [style*="background: rgba(0, 12, 26"],
+html.light [style*="background: rgba(13,31,45"],
+html.light [style*="background: rgba(13, 31, 45"],
+html.light [style*="background: rgba(7,19"],
+html.light [style*="background: rgba(10,14"],
+html.light [style*="background: rgba(10, 14"],
+html.light [style*="background:#071"],
+html.light [style*="background: #071"],
+html.light [style*="background:#0a0"],
+html.light [style*="background: #0a0"],
+html.light [style*="background:#0f1"],
+html.light [style*="background: #0f1"],
+html.light [style*="background:#1a1"],
+html.light [style*="background: #1a1"],
+html.light [style*="background:#0d2"],
+html.light [style*="background: #0d2"],
+html.light [style*="background: #003049"],
+html.light [style*="background:#003049"],
+html.light [style*="background-color: #003049"],
+html.light [style*="background-color:#003049"],
+html.light [style*="background: #0A192F"],
+html.light [style*="background:#0A192F"],
+html.light [style*="background-color: #0A192F"],
+html.light [style*="background-color:#0A192F"],
+html.light [style*="background: linear-gradient(135deg, #0"],
+html.light [style*="background: linear-gradient(135deg,#0"],
+html.light [style*="background: linear-gradient(to bottom right, rgba(0, 48"],
+html.light [style*="background: linear-gradient(to bottom right, rgba(0,48"] {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Cor do texto dentro de containers com background escuro hardcoded —
+   APENAS texto sem cor inline própria (não sobrescrever cores semânticas) */
+html.light [style*="background-color: #003049"] > *:not([style*="color"]),
+html.light [style*="background-color: #0A192F"] > *:not([style*="color"]) {
+  color: #0F172A;
+}
+
+/* ============================================================
+   INLINE STYLES — Acentos semânticos ajustados para fundo claro
+   A lógica semântica é preservada — apenas luminosidade adaptada
+   ============================================================ */
+
+/* Verde primário — escurecer para contraste em fundo branco */
+html.light [style*="color: #00E676"],
+html.light [style*="color: #00e676"],
+html.light [style*="color:#00E676"],
+html.light [style*="color:#00e676"],
+html.light [style*="color: rgb(0, 230, 118"],
+html.light [style*="color: rgb(0,230,118"] {
+  color: #057A55 !important;
+}
+
+/* Amarelo/Warning — escurecer para legibilidade (semântica preservada) */
+html.light [style*="color: #FFD54F"],
+html.light [style*="color: #ffd54f"],
+html.light [style*="color: #FFD166"],
+html.light [style*="color: #ffd166"],
+html.light [style*="color: rgb(255, 213, 79"],
+html.light [style*="color: rgb(255, 209, 102"] {
+  color: #D97706 !important;
+}
+
+/* Azul claro — escurecer (semântica info preservada) */
+html.light [style*="color: #4FC3F7"],
+html.light [style*="color: #4fc3f7"],
+html.light [style*="color: rgb(79, 195, 247"] {
+  color: #1D4ED8 !important;
+}
+
+/* Verde Tailwind (GlobalMap) */
+html.light [style*="color: #4ade80"],
+html.light [style*="color: rgb(74, 222, 128"] {
+  color: #00875A !important;
+}
+
+/* Vermelho claro -> escurecer */
+html.light [style*="color: #f87171"],
+html.light [style*="color: #F87171"],
+html.light [style*="color: rgb(248, 113, 113"] {
+  color: #DC2626 !important;
+}
+
+/* ============================================================
+   GLOBALMAP & OUTROS PAINEIS ESOUROS — painel lateral, modais
+   ============================================================ */
+
+html.light [style*="background: #111827"],
+html.light [style*="background:#111827"],
+html.light [style*="background: #1a1f2e"],
+html.light [style*="background:#1a1f2e"],
+html.light [style*="background: #1f2937"],
+html.light [style*="background:#1f2937"],
+html.light [style*="background: #374151"],
+html.light [style*="background:#374151"],
+html.light [style*="background: #001F3F"],
+html.light [style*="background:#001F3F"],
+html.light [style*="background: #0f172a"],
+html.light [style*="background:#0f172a"] {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Forçar texto branco para escuro dentro desses backgrounds que viraram brancos */
+html.light [style*="background: #111827"][style*="color: #fff"],
+html.light [style*="background:#111827"][style*="color:#fff"],
+html.light [style*="background: #1a1f2e"][style*="color: #fff"],
+html.light [style*="background:#1a1f2e"][style*="color:#fff"],
+html.light [style*="background: #1f2937"][style*="color: #fff"],
+html.light [style*="background:#1f2937"][style*="color:#fff"],
+html.light [style*="background: #374151"][style*="color: #fff"],
+html.light [style*="background:#374151"][style*="color:#fff"],
+html.light [style*="background: #001F3F"][style*="color: #fff"],
+html.light [style*="background:#001F3F"][style*="color:#fff"],
+html.light [style*="background: #0f172a"][style*="color: #fff"],
+html.light [style*="background:#0f172a"][style*="color:#fff"],
+html.light [style*="background: #111827"][style*="color: #ffffff"],
+html.light [style*="background:#111827"][style*="color:#ffffff"] {
+  color: #0F172A !important;
+}
+
+html.light [style*="color: #fff"]:not([style*="background"]),
+html.light [style*="color: #ffffff"]:not([style*="background"]),
+html.light [style*="color: white"]:not([style*="background"]) {
+  color: #0F172A !important;
+}
+
+/* Cinzas genéricos — mapear para hierarquia de texto */
+html.light [style*="color: #aaa"],
+html.light [style*="color: #888"],
+html.light [style*="color: #666"] {
+  color: #64748B !important;
+}
+
+html.light [style*="color: #9ca3af"],
+html.light [style*="color: #94a3b8"],
+html.light [style*="color: #d1d5db"] {
+  color: #94A3B8 !important;
+}
+
+/* ============================================================
+   INLINE STYLES — Castanho dark-mode (rgba 120,53,15 / rgba 127,29,29)
+   Estes tons são warning/error backgrounds do dark mode.
+   No light mode substituem-se por cinzento neutro enterprise.
+   ============================================================ */
+
+html.light [style*="background: rgba(120,53,15"],
+html.light [style*="background: rgba(120, 53, 15"] {
+  background: #F8F9FA !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light [style*="background: rgba(127,29,29"],
+html.light [style*="background: rgba(127, 29, 29"] {
+  background: #FEF2F2 !important;
+  border-color: #FECACA !important;
+}
+
+/* ============================================================
+   CHAT — GaiaMindDynamicChatFixed
+   ============================================================ */
+
+html.light [style*="background: rgba(0,0,12"],
+html.light [style*="background: rgba(0, 0, 12"] {
+  background: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light [style*="background-color: #1f2937"],
+html.light [style*="background-color:#1f2937"],
+html.light [style*="background-color: #374151"],
+html.light [style*="background-color:#374151"],
+html.light [style*="background: #1f2937"],
+html.light [style*="background:#1f2937"],
+html.light [style*="background: #374151"],
+html.light [style*="background:#374151"] {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+html.light [style*="background-color: #1f2937"] > *:not([style*="color"]),
+html.light [style*="background-color:#1f2937"] > *:not([style*="color"]),
+html.light [style*="background-color: #374151"] > *:not([style*="color"]),
+html.light [style*="background-color:#374151"] > *:not([style*="color"]) {
+  color: #475569;
+}
+
+/* ============================================================
+   ANALYTICS / SECURITY DASHBOARD — SecurityDashboard, ServiceMonitor
+   ============================================================ */
+
+/* bgCard e bgDeep */
+html.light [style*="background: rgba(0,30,50,0.7)"],
+html.light [style*="background: rgba(0, 30, 50, 0.7)"],
+html.light [style*="background: rgba(0,48,73,0.6)"],
+html.light [style*="background: rgba(0, 48, 73, 0.6)"] {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* ============================================================
+   TEXTOS GENÉRICOS — hierarquia visual preservada (nunca colapsar para #000)
+   ============================================================ */
+
+html.light h1, html.light h2, html.light h3,
+html.light h4, html.light h5, html.light h6 {
+  color: #0F172A !important;
+}
+
+html.light p     { color: #475569 !important; }
+html.light label { color: #64748B !important; }
+
+/* ============================================================
+   INPUTS, SELECTS, TEXTAREAS
+   ============================================================ */
+
+html.light input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+html.light select,
+html.light textarea {
+  background: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94A3B8 !important;
+  opacity: 0.5;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #00875A !important;
+  box-shadow: 0 0 0 2px rgba(0,135,90,0.12) !important;
+  outline: none !important;
+}
+
+/* ============================================================
+   BORDERS — rgba(0,230,118,*) → cinza claro
+   ============================================================ */
+
+html.light [style*="border: 1px solid rgba(0,230,118"],
+html.light [style*="border: 1px solid rgba(0, 230, 118"],
+html.light [style*="border-color: rgba(0,230,118"],
+html.light [style*="border-color: rgba(0, 230, 118"] {
+  border-color: #E2E8F0 !important;
+}
+
+html.light [style*="border: 1px solid rgba(224,247,250"],
+html.light [style*="border: 1px solid rgba(224, 247, 250"] {
+  border-color: #CBD5E1 !important;
+}
+
+/* ============================================================
+   BACKGROUNDS VERDES SUBTIS — manter mas clarear
+   ============================================================ */
+
+html.light [style*="background: rgba(0,230,118,0.08)"],
+html.light [style*="background: rgba(0, 230, 118, 0.08)"],
+html.light [style*="background: rgba(0,230,118,0.1)"],
+html.light [style*="background: rgba(0, 230, 118, 0.1)"] {
+  background: rgba(0,135,90,0.06) !important;
+}
+
+html.light [style*="background: rgba(0,230,118,0.2)"],
+html.light [style*="background: rgba(0, 230, 118, 0.2)"] {
+  background: rgba(0,135,90,0.12) !important;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary-light); }
+
+html.light ::-webkit-scrollbar-track { background: #F1F5F9; }
+html.light ::-webkit-scrollbar-thumb { background: #94A3B8; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #64748B; }
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.25rem;
+    --spacing-2xl: 1.5rem;
+  }
+}

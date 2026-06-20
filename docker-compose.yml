@@ -1,0 +1,188 @@
+services:
+  # ========== NGINX LOAD BALANCER ==========
+  nginx:
+    image: nginx:alpine
+    container_name: gaiamind-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - gaiamind
+
+  # ========== WEB API (scalable) ==========
+  web:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.web
+    environment:
+      MODE: production
+      ENVIRONMENT: production
+      ENABLE_LOCAL_ML: "false"
+      API_WORKERS: ${API_WORKERS:-4}
+      LOG_LEVEL: INFO
+      # Database
+      DATABASE_URL: postgresql://gaiamind:${POSTGRES_PASSWORD}@db:5432/gaiamind
+      # Redis
+      REDIS_URL: redis://redis:6379/0
+      # AI Providers (from .env)
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      AI_PROVIDER: ${AI_PROVIDER:-groq}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      TEMPERATURE: ${TEMPERATURE:-0.7}
+      MAX_TOKENS: ${MAX_TOKENS:-2000}
+      # Web Search
+      TAVILY_API_KEY: ${TAVILY_API_KEY}
+      SERPAPI_API_KEY: ${SERPAPI_API_KEY}
+      SERPER_API_KEY: ${SERPER_API_KEY}
+      LANGSEARCH_API_KEY: ${LANGSEARCH_API_KEY}
+      # NRT APIs
+      OPENAQ_API_KEY: ${OPENAQ_API_KEY}
+      GFW_API_KEY: ${GFW_API_KEY}
+      # Auth
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      JWT_EXPIRATION_HOURS: ${JWT_EXPIRATION_HOURS:-24}
+      # OAuth
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+      OAUTH_REDIRECT_BASE: ${OAUTH_REDIRECT_BASE:-http://localhost:3000}
+      OAUTH_BACKEND_BASE: ${OAUTH_BACKEND_BASE:-http://localhost:8000}
+      TRUSTED_PROXY_IPS: ${TRUSTED_PROXY_IPS:-}
+      # Email
+      BREVO_SMTP_HOST: ${BREVO_SMTP_HOST}
+      BREVO_SMTP_PORT: ${BREVO_SMTP_PORT}
+      BREVO_SMTP_USER: ${BREVO_SMTP_USER}
+      BREVO_SMTP_KEY: ${BREVO_SMTP_KEY}
+      EMAIL_FROM: ${EMAIL_FROM}
+      OWNER_EMAIL: ${OWNER_EMAIL}
+      # Features
+      ENABLE_RAG: ${ENABLE_RAG:-true}
+      ENABLE_MEMORY: ${ENABLE_MEMORY:-true}
+      ENABLE_FEEDBACK: ${ENABLE_FEEDBACK:-true}
+      ENABLE_OFFLINE_DATA: ${ENABLE_OFFLINE_DATA:-true}
+      USE_NEW_ARCHITECTURE: "true"
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-ollama}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      # Concurrency
+      LLM_MAX_CONCURRENT: ${LLM_MAX_CONCURRENT:-10}
+      LLM_QUEUE_TIMEOUT: ${LLM_QUEUE_TIMEOUT:-120}
+      # Telemetry off
+      ANONYMIZED_TELEMETRY: "False"
+      CHROMA_TELEMETRY: "False"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    deploy:
+      replicas: ${WEB_REPLICAS:-1}
+      resources:
+        limits:
+          memory: 1500M
+          cpus: "3.0"
+        reservations:
+          memory: 400M
+          cpus: "0.5"
+    restart: unless-stopped
+    networks:
+      - gaiamind
+
+  # ========== ML SERVICE (optional) ==========
+  ml:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.ml
+    container_name: gaiamind-ml
+    ports:
+      - "8001:8001"
+    environment:
+      MODE: research
+      ENABLE_LOCAL_ML: "true"
+      LOG_LEVEL: DEBUG
+    profiles:
+      - research
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - gaiamind
+
+  # ========== DATABASE ==========
+  db:
+    image: postgres:15-alpine
+    container_name: gaiamind-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: gaiamind
+      POSTGRES_USER: gaiamind
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      # Tuning para concorrência
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    command:
+      - "postgres"
+      - "-c" 
+      - "max_connections=200"
+      - "-c"
+      - "shared_buffers=256MB"
+      - "-c"
+      - "work_mem=4MB"
+      - "-c"
+      - "effective_cache_size=512MB"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gaiamind"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    restart: unless-stopped
+    networks:
+      - gaiamind
+
+  # ========== REDIS (rate limit + cache) ==========
+  redis:
+    image: redis:7-alpine
+    container_name: gaiamind-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --save ""
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 200M
+    restart: unless-stopped
+    networks:
+      - gaiamind
+
+networks:
+  gaiamind:
+    driver: bridge
+
+volumes:
+  postgres_data:

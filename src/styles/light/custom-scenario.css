@@ -1,0 +1,203 @@
+/* ============================================================
+   CUSTOM SCENARIO BUILDER — LIGHT MODE ENTERPRISE
+   ============================================================ */
+
+/* Títulos h1 e h2 negritados com fonte principal (Google Sans) */
+html.light .cs-container h1,
+html.light .cs-container h2,
+html.light .cs-bundle-title,
+html.light .cs-panel-desc {
+  color: #00875A !important;
+  font-family: 'Google Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Root & Status Messages */
+html.light .cs-error {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  color: #DC2626 !important;
+}
+
+html.light .cs-info {
+  background: rgba(0, 135, 90, 0.08) !important;
+  border: 1px solid rgba(0, 135, 90, 0.2) !important;
+  color: #00875A !important;
+}
+
+/* Labels */
+html.light .cs-label,
+html.light .cs-sug-meta,
+html.light .cs-baseline-tag,
+html.light .cs-baseline-insight,
+html.light .cs-mode-label,
+html.light .cs-panel-caption,
+html.light .cs-slider-label,
+html.light .cs-nl-examples-label,
+html.light .cs-result-tag,
+html.light .cs-result-change,
+html.light .cs-formulas-title {
+  color: #5F6368 !important;
+}
+
+/* Inputs & Search */
+html.light .cs-input,
+html.light .cs-textarea,
+html.light .cs-select {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #1F1F1F !important;
+}
+
+html.light .cs-input:focus,
+html.light .cs-textarea:focus {
+  border-color: #00875A !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 2px rgba(0, 135, 90, 0.1) !important;
+}
+
+html.light .cs-input::placeholder,
+html.light .cs-textarea::placeholder {
+  color: #5F6368 !important;
+}
+
+html.light .cs-suggestions,
+html.light .cs-mode-tabs,
+html.light .cs-panel,
+html.light .cs-result {
+  background: #FFFFFF !important;
+  border: 1px solid #E8EAED !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .cs-sug-item,
+html.light .cs-policy-cat {
+  border-bottom: 1px solid #E8EAED !important;
+}
+
+html.light .cs-sug-item:hover {
+  background: #F8F9FA !important;
+}
+
+html.light .cs-sug-name,
+html.light .cs-policy-cat,
+html.light .cs-policy-check-label,
+html.light .cs-composer-item-label,
+html.light .cs-formula-item {
+  color: #1F1F1F !important;
+}
+
+html.light .cs-slider-val,
+html.light .cs-result-score,
+html.light .cs-result-change {
+  color: inherit !important;
+}
+
+/* Baseline Indicator */
+html.light .cs-baseline {
+  border-color: #E8EAED !important;
+}
+
+html.light .cs-mode-tab {
+  background: #F0F4F8 !important;
+  border: 1px solid #DADCE0 !important;
+  color: #5F6368 !important;
+}
+
+html.light .cs-mode-tab:hover {
+  border-color: #00875A !important;
+  background: #F8F9FA !important;
+  color: #1F1F1F !important;
+}
+
+html.light .cs-mode-tab--active {
+  border-color: #00875A !important;
+  background: rgba(0, 135, 90, 0.08) !important;
+  color: #00875A !important;
+  font-weight: 600 !important;
+}
+
+html.light .cs-policy-card,
+html.light .cs-bundle-preview,
+html.light .cs-slider-card,
+html.light .cs-composer-item,
+html.light .cs-formula-item {
+  background: #F8F9FA !important;
+  border: 1px solid #E8EAED !important;
+}
+
+html.light .cs-policy-card--active {
+  border-color: #00875A !important;
+  background: rgba(0, 135, 90, 0.05) !important;
+}
+
+html.light .cs-intensity-btn {
+  background: #F0F4F8 !important;
+  border-color: #DADCE0 !important;
+  color: #5F6368 !important;
+}
+
+html.light .cs-intensity-btn:hover {
+  background: #E8EAED !important;
+  color: #1F1F1F !important;
+}
+
+html.light .cs-checkbox,
+html.light .cs-slider {
+  accent-color: #00875A !important;
+}
+
+html.light .cs-intensity-btn[style*="transparent"] {
+  border-color: #DADCE0 !important;
+  color: #5F6368 !important;
+}
+
+html.light .cs-nl-example-btn,
+html.light .cs-add-btn,
+html.light .cs-run-btn {
+  background: rgba(0, 135, 90, 0.08) !important;
+  border: 1px solid rgba(0, 135, 90, 0.2) !important;
+  color: #00875A !important;
+}
+
+html.light .cs-nl-example-btn:hover,
+html.light .cs-add-btn:hover,
+html.light .cs-run-btn:hover:not(:disabled) {
+  background: rgba(0, 135, 90, 0.15) !important;
+  border-color: rgba(0, 135, 90, 0.4) !important;
+}
+
+html.light .cs-composer-remove {
+  color: rgba(220, 38, 38, 0.7) !important;
+}
+
+html.light .cs-composer-remove:hover {
+  color: #DC2626 !important;
+}
+
+html.light .cs-run-btn:disabled {
+  background: #E8EAED !important;
+  border-color: #DADCE0 !important;
+  color: #9AA0A6 !important;
+  opacity: 1 !important;
+}
+
+html.light .cs-reset-btn {
+  background: #FFFFFF !important;
+  border: 1px solid #DADCE0 !important;
+  color: #5F6368 !important;
+}
+
+html.light .cs-reset-btn:hover {
+  border-color: #00875A !important;
+  color: #00875A !important;
+  background: #F8F9FA !important;
+}
+
+html.light .cs-result-arrow {
+  color: #DADCE0 !important;
+}
+
+html.light .cs-formula-item {
+  border-left: 3px solid rgba(0, 135, 90, 0.3) !important;
+}
