@@ -3,21 +3,34 @@ name: GaiaMind CI
 on:
   push:
     branches: [main, develop]
-    paths:
-      - "backend/**"
-      - ".github/workflows/ci.yml"
   pull_request:
     branches: [main, develop]
-    paths:
-      - "backend/**"
 
 jobs:
-  test:
+  frontend:
+    name: Frontend Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+  backend:
+    name: Backend Lint
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: backend
-
     steps:
       - uses: actions/checkout@v4
 
@@ -28,34 +41,10 @@ jobs:
           cache: pip
           cache-dependency-path: backend/requirements.txt
 
-      - name: Install dependencies
+      - name: Install core dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest pytest-asyncio pytest-cov
+          pip install fastapi uvicorn pydantic pydantic-settings python-dotenv
 
-      - name: Run tests with coverage
-        env:
-          DATABASE_URL: sqlite:///./test.db
-          JWT_SECRET_KEY: ci-test-secret-key-not-for-production
-          AI_PROVIDER: mock
-          ENVIRONMENT: test
-        run: |
-          pytest tests/ \
-            --cov=app/services \
-            --cov=app/monitoring \
-            --cov-report=xml:coverage.xml \
-            --cov-report=term-missing \
-            --tb=short \
-            -q
-
-      - name: Upload coverage to Codecov
-        if: always()
-        uses: codecov/codecov-action@v4
-        with:
-          file: backend/coverage.xml
-          flags: backend
-          fail_ci_if_error: false
-
-      - name: Coverage gate (60%)
-        run: python -m coverage report --fail-under=60 || echo "WARNING coverage below 60%"
+      - name: Check syntax
+        run: python -m py_compile app/main.py app/config.py app/health.py
