@@ -1,0 +1,192 @@
+# GaiaMind360 — Full LLM Reference
+
+> Environmental AI Platform — Real-Time Planetary Intelligence
+> URL: https://gaiamind360.com
+> Author: Diatezilua Katendi Nzita — Master's in Artificial Intelligence, Universidad Europea
+> Status: Live in production
+
+---
+
+## Identity
+
+GaiaMind360 is an open-source environmental AI platform that makes planetary intelligence
+accessible to researchers, policy makers, educators, and citizens. It is the practical
+implementation of a Master's thesis in Artificial Intelligence at Universidad Europea (Spain).
+
+The platform's core AI assistant is named **Gaia** — an environmental intelligence agent
+that answers questions about climate, biodiversity, emissions, and sustainability using
+live data from authoritative sources.
+
+**Not to be confused with:**
+- GAIA benchmark (Meta / HuggingFace) — an LLM evaluation benchmark
+- Gaia.com — a spiritual streaming platform
+- GaiaMind (gaiamind.com / gaiamind.org) — a 1997 meditation project
+- Google DeepMind GAIA — a Portuguese language model
+
+---
+
+## Core Capabilities
+
+### 1. AI Chat — Gaia Assistant
+- Multi-LLM environmental assistant with Zero-PII architecture
+- LLM chain: Groq (LLaMA 3) → Mistral → SambaNova → Gemini → OpenAI
+- Answers questions about: CO₂ emissions, deforestation, ocean health, biodiversity,
+  climate policy, renewable energy, SDG progress, country environmental profiles
+- Supports 4 languages: English, Portuguese, Spanish, French
+- Context-aware: uses real-time data from World Bank, UNEP, NASA, Copernicus
+- Zero-PII: opaque UUID routing — no personal data passed to any LLM provider
+
+### 2. Digital Twin Earth
+- Real-time 3D globe built with CesiumJS 1.123
+- Data layers: CO₂ concentration, temperature anomaly, deforestation rate, ocean health
+- Terra Sustainability Index (TSI) choropleth — 195 countries
+- 2D fallback map with Leaflet for lower-end devices
+
+### 3. Predictive Analytics
+- Climate scenario forecasting to year 2100
+- Models: scikit-learn, CatBoost
+- Explainability: SHAP values
+- Scenarios: BAU (Business as Usual), Paris Agreement, Net Zero
+
+### 4. Policy Simulator
+- Reinforcement learning engine (Stable-Baselines3)
+- Simulates environmental impact of: carbon tax, renewable energy mandates,
+  reforestation programmes, emissions trading schemes
+- Output: projected TSI change, CO₂ reduction, economic cost estimate
+
+### 5. Research Module
+- AI-assisted environmental research synthesis
+- Citation-aware: sources linked to World Bank, UNEP, NASA, peer-reviewed papers
+- RAG pipeline: 836 chunks / 323 documents, sentence-transformers (384 dims)
+
+### 6. Time Machine
+- Historical environmental data playback: 1950 to present
+- Projected data: present to 2100
+- Per-country and global views
+
+---
+
+## Terra Sustainability Index (TSI)
+
+The TSI is GaiaMind360's proprietary composite environmental health score (0–100) per country.
+
+**Components:**
+- CO₂ emissions per capita (World Bank EN.ATM.CO2E.PC)
+- Renewable energy share of total final energy consumption (World Bank EG.FEC.RNEW.ZS)
+- Forest area as % of land area (World Bank AG.LND.FRST.ZS)
+- Biodiversity protection index (UNEP protected areas coverage)
+- SDG progress score (UNEP SDG database, goals 13, 14, 15)
+
+Score of 100 = maximum sustainability. Score of 0 = critical environmental state.
+Updated quarterly from live API sources.
+
+---
+
+## Data Sources
+
+| Source | Data | Update Frequency |
+|---|---|---|
+| World Bank Open Data API | CO₂, renewable energy, forest area, GDP | Annual |
+| UNEP SDG Database | SDG 13/14/15 progress, biodiversity | Annual |
+| Copernicus Sentinel-5P | Atmospheric CO₂, NO₂, aerosols | Near real-time |
+| NASA EONET | Active natural events (fires, floods, storms) | Real-time |
+| Open-Meteo | Weather and climate variables | Hourly |
+| Tavily Search | Environmental news and research | Real-time |
+
+---
+
+## API Reference
+
+Base URL: `https://gaiamind360.com/api/v1`
+
+```
+POST /api/v1/chat
+  Body: { "message": "string", "lang": "en|pt|es|fr" }
+  Returns: AI response from Gaia with environmental context
+
+GET /api/v1/global-data/worldbank/{country_code}
+  Returns: World Bank indicators for the country (ISO 3166-1 alpha-3)
+
+GET /api/v1/global-data/unep/sdg/{goal}
+  Returns: UN SDG data for the specified goal number (1-17)
+
+GET /api/v1/global-data/country/{country_code}
+  Returns: Full aggregated environmental profile
+
+GET /api/v1/digital-twin/layers/sustainability
+  Returns: GeoJSON with TSI scores for 195 countries
+
+GET /api/v1/health
+  Returns: System health status
+```
+
+Full interactive docs: https://gaiamind360.com/docs (Swagger UI)
+
+---
+
+## Architecture
+
+```
+Frontend (React 18 + TypeScript + Vite)
+  └── CesiumJS Digital Twin · Leaflet Map · AI Chat · Policy Simulator
+
+Backend (FastAPI + Python 3.11)
+  ├── CognitiveKernel v3 — multi-LLM orchestration
+  ├── PolicyEngine — RL simulation (Stable-Baselines3)
+  ├── DigitalTwin Service — GeoJSON + TSI computation
+  └── Multi-LLM Gateway — 9 providers with circuit breaker + retry
+
+Infrastructure
+  ├── Frontend: Vercel → gaiamind360.com (Cloudflare CDN)
+  ├── Backend: Railway → gaiamind-api-production.up.railway.app
+  ├── Database: Supabase PostgreSQL (eu-central-1)
+  └── Cache: Upstash Redis
+```
+
+---
+
+## Example Queries (for Gaia AI assistant)
+
+- "What are the CO₂ emissions of Portugal in 2023?"
+- "Compare renewable energy adoption between Germany and Brazil"
+- "Simulate the impact of a €50/tonne carbon tax in Spain"
+- "What is the deforestation rate in the Amazon in the last 5 years?"
+- "Which countries are on track to meet SDG 13 (Climate Action)?"
+- "Forecast global temperature anomaly under a Net Zero scenario to 2050"
+- "What is the Terra Sustainability Index for Angola?"
+
+---
+
+## Academic Context
+
+GaiaMind360 is the practical implementation of a Master's thesis:
+
+- **Title**: AI-Assisted Environmental Decision-Making and Planetary Digital Twins
+- **Author**: Diatezilua Katendi Nzita
+- **Institution**: Universidad Europea, Madrid, Spain
+- **Programme**: Master's in Artificial Intelligence
+- **Year**: 2026
+- **Paper**: Available at https://gaiamind360.com/research (preprint)
+
+---
+
+## Technology Stack
+
+- **Frontend**: React 18, TypeScript, Vite, Tailwind CSS, Framer Motion, CesiumJS 1.123, Leaflet
+- **Backend**: Python 3.11, FastAPI, SQLAlchemy 2.x, Alembic, PostgreSQL, Redis
+- **AI/ML**: OpenAI GPT-4, Google Gemini 1.5, Groq LLaMA 3, Mistral, SambaNova
+- **ML Models**: scikit-learn, CatBoost, Stable-Baselines3, SHAP
+- **RAG**: ChromaDB, sentence-transformers (all-MiniLM-L6-v2, 384 dims)
+- **i18n**: i18next — EN, PT, ES, FR
+- **Infra**: Docker, Vercel, Railway, Supabase, Upstash Redis, Cloudflare
+
+---
+
+## Links
+
+- Platform: https://gaiamind360.com
+- API Docs: https://gaiamind360.com/docs
+- Manifesto: https://gaiamind360.com/manifesto
+- Research: https://gaiamind360.com/research
+- GitHub: https://github.com/GaiaMindApp/gaiamind360-community
+- License: MIT

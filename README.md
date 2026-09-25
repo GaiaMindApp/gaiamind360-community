@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/og-image.png" alt="GaiaMind360" width="100%" style="border-radius:12px" />
+<img src="public/gaiamind_community.png" alt="GaiaMind360" width="100%" style="border-radius:12px" />
 
 # GaiaMind360
 
@@ -37,6 +37,7 @@ GaiaMind360 is an open-source environmental AI platform that makes planetary int
 |---|---|
 | 🌍 **Digital Twin Earth** | Real-time 3D globe (CesiumJS) with CO₂, temperature anomaly, deforestation and ocean health overlays |
 | 🤖 **AI Chat (Gaia)** | Multi-LLM environmental assistant (GPT-4, Gemini, Groq/LLaMA) with Zero-PII architecture |
+| 🧠 **Cognitive AI Pipeline** | Multi-stage reasoning engine with parallel processing and intelligent intent routing |
 | 📊 **Predictive Analytics** | Climate scenario forecasting to 2100 using scikit-learn and Stable-Baselines3 |
 | 🏛️ **Policy Simulator** | Reinforcement learning engine to simulate environmental impact of policy decisions |
 | 🔬 **Research Module** | AI-assisted synthesis with citation-aware environmental research |
@@ -58,13 +59,13 @@ GaiaMind360 is an open-source environmental AI platform that makes planetary int
 │                    Backend (FastAPI)                          │
 │                                                              │
 │  ┌─────────────────┐  ┌──────────────┐  ┌────────────────┐  │
-│  │ CognitiveKernel │  │ PolicyEngine │  │  DigitalTwin   │  │
-│  │      v3         │  │   (RL/ML)    │  │   Service      │  │
+│  │  Cognitive AI   │  │ PolicyEngine │  │  DigitalTwin   │  │
+│  │    Pipeline     │  │   (RL/ML)    │  │   Service      │  │
 │  └────────┬────────┘  └──────────────┘  └────────────────┘  │
 │           │                                                  │
 │  ┌────────▼────────────────────────────────────────────┐    │
 │  │              Multi-LLM Orchestrator                  │    │
-│  │  GPT-4 · Gemini · Groq (LLaMA) · Local fallback    │    │
+│  │  GPT-4 · Gemini · Groq (LLaMA) · Mistral · more    │    │
 │  └─────────────────────────────────────────────────────┘    │
 └──────────────────────────┬──────────────────────────────────┘
                            │
@@ -88,12 +89,14 @@ GaiaMind360 is an open-source environmental AI platform that makes planetary int
 
 ### Backend
 - **FastAPI** + Python 3.11
-- **PostgreSQL** + Redis
+- **PostgreSQL** + Redis (cache/sessions)
 - **ChromaDB** — vector semantic memory
+- **SQLAlchemy** + Alembic migrations
 - Docker + Docker Compose
 
 ### AI / ML
-- OpenAI GPT-4, Google Gemini, Groq (LLaMA 3)
+- OpenAI GPT-4, Google Gemini, Groq (LLaMA 3), Mistral and more
+- Multi-LLM orchestration with circuit breaker and graceful degradation
 - scikit-learn, CatBoost — climate predictions
 - Stable-Baselines3 — policy simulation (RL)
 - SHAP — model explainability
@@ -127,7 +130,7 @@ Access: http://localhost:3000
 
 ```bash
 cd backend
-cp .env.example .env
+cp .env.example .env        # fill in your API keys
 pip install -r requirements.txt
 python start.py
 ```
@@ -154,7 +157,7 @@ GOOGLE_API_KEY=
 GROQ_API_KEY=
 
 # Database
-DATABASE_URL=postgresql://user:password@localhost:5433/gaiamind
+DATABASE_URL=postgresql+psycopg2://user:password@localhost:5433/gaiamind
 
 # Auth
 JWT_SECRET_KEY=
@@ -178,7 +181,7 @@ Base URL: `https://gaiamind360.com/api/v1`
 | `GET` | `/digital-twin/layers/sustainability` | TSI GeoJSON (195 countries) |
 | `GET` | `/health` | System health check |
 
-Full interactive docs at `/docs` (Swagger UI).
+Full interactive docs at [`/docs`](https://gaiamind360.com/docs) (Swagger UI).
 
 ---
 
@@ -189,8 +192,8 @@ The TSI is a composite score (0–100) computed per country from:
 - CO₂ emissions per capita (World Bank)
 - Renewable energy share (World Bank)
 - Forest area percentage (World Bank)
-- Biodiversity protection index
-- SDG progress score (UNEP)
+- Biodiversity protection index (UNEP)
+- SDG progress score (UNEP goals 13, 14, 15)
 
 A score of 100 = maximum sustainability. Displayed as a choropleth layer on the Digital Twin Earth.
 
@@ -207,18 +210,17 @@ gaiamind360/
 │   ├── hooks/                  # React hooks
 │   └── locales/                # i18n (en, pt, es, fr)
 ├── backend/
-│   ├── app/
-│   │   ├── routes/             # FastAPI endpoints
-│   │   ├── models/             # Data schemas
-│   │   ├── config.py           # Configuration management
-│   │   └── main.py             # Application entry point
-│   ├── Dockerfile
-│   └── requirements.txt
+│   ├── app/                    # FastAPI application
+│   ├── language_detection/     # Enterprise language detector
+│   └── tests/                  # Unit & integration tests
 ├── public/
-│   ├── robots.txt
-│   ├── sitemap.xml
-│   └── llms.txt
-├── nginx/
+│   ├── robots.txt              # LLM crawler permissions
+│   ├── sitemap.xml             # SEO sitemap
+│   ├── llms.txt                # LLM-readable site summary
+│   └── llms-full.txt           # LLM-readable full reference
+├── nginx/                      # Reverse proxy config
+├── CITATION.cff                # Academic citation
+├── CHANGELOG.md                # Version history
 └── docker-compose.yml
 ```
 
@@ -228,6 +230,8 @@ gaiamind360/
 
 GaiaMind360 is the practical implementation of a Master's thesis in Artificial Intelligence at **Universidad Europea**. The platform operationalises the research on AI-assisted environmental decision-making and the concept of **planetary digital twins** for policy analysis.
 
+An academic paper describing the system architecture and evaluation methodology is available at [gaiamind360.com/research](https://gaiamind360.com/research).
+
 ---
 
 ## Roadmap
@@ -235,6 +239,7 @@ GaiaMind360 is the practical implementation of a Master's thesis in Artificial I
 - [ ] Mobile app (React Native)
 - [ ] HuggingFace model card + dataset
 - [ ] Public API with rate limiting & API keys
+- [ ] arXiv paper publication
 - [ ] Webhook integrations (Slack, Teams, email alerts)
 - [ ] Offline mode for low-connectivity regions
 
@@ -243,7 +248,19 @@ GaiaMind360 is the practical implementation of a Master's thesis in Artificial I
 ## Contributing
 
 Contributions, issues, and feature requests are welcome.  
-Please read the contributing guidelines before submitting a pull request.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
+
+---
+
+## Citation
+
+If you use GaiaMind360 in your research, please cite it using [CITATION.cff](CITATION.cff) or:
+
+```
+Katendi Nzita, D. (2026). GaiaMind360: Environmental AI Platform for
+Real-Time Planetary Intelligence. Universidad Europea.
+https://gaiamind360.com
+```
 
 ---
 
@@ -267,6 +284,8 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 **Built with 🌍 by [Diatezilua Katendi Nzita](https://github.com/GaiaMindApp)**  
 Universidad Europea · Master's in Artificial Intelligence
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Diatezilua%20Katendi%20Nzita-0077B5?logo=linkedin)](https://www.linkedin.com/in/diatezilua-katendi-nzita-412640210/)
 
 [gaiamind360.com](https://gaiamind360.com)
 

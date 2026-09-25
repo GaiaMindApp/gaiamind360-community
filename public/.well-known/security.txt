@@ -1,0 +1,5 @@
+Contact: mailto:security@gaiamind360.com
+Expires: 2027-09-25T00:00:00.000Z
+Preferred-Languages: en, pt, es, fr
+Canonical: https://gaiamind360.com/.well-known/security.txt
+Policy: https://gaiamind360.com/security-policy

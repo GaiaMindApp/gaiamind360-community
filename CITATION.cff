@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use GaiaMind360 in your research, please cite it as below."
+type: software
+title: "GaiaMind360: Environmental AI Platform for Real-Time Planetary Intelligence"
+abstract: >
+  GaiaMind360 is an open-source environmental AI platform that combines large language
+  models, real-time satellite data, and reinforcement learning to provide planetary
+  intelligence for climate research, policy simulation, and sustainability analytics.
+  The platform integrates data from World Bank, UNEP, NASA, and Copernicus Sentinel
+  for 195 countries, featuring a 3D Digital Twin Earth, predictive climate modelling
+  to 2100, and a multi-LLM AI assistant (Gaia) with Zero-PII architecture.
+authors:
+  - family-names: "Katendi Nzita"
+    given-names: "Diatezilua"
+    affiliation: "Universidad Europea"
+    url: "https://www.linkedin.com/in/diatezilua-katendi-nzita-412640210/"
+version: "1.1.0"
+date-released: "2026-09-25"
+url: "https://gaiamind360.com"
+repository-code: "https://github.com/GaiaMindApp/gaiamind360-community"
+license: MIT
+keywords:
+  - environmental AI
+  - climate intelligence
+  - digital twin
+  - planetary intelligence
+  - sustainability
+  - multi-LLM
+  - reinforcement learning
+  - climate prediction
+  - policy simulation
+  - CO2 emissions
+  - World Bank
+  - UNEP
+  - NASA
+  - Copernicus
